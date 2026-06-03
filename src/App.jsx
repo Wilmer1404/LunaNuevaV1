@@ -4,39 +4,30 @@ import Navbar from './components/layout/Navbar';
 import Hero from './components/sections/Hero';
 import Footer from './components/layout/Footer';
 import Catering from './components/sections/Catering';
-
+import Inicio from './components/sections/Inicio';
 import Restaurante from './components/sections/Restaurante';
 import Habitaciones from './components/sections/Habitaciones';
 
+const PT = { paddingTop: '72px' };
+
 function App() {
-  // Estado global para controlar en qué "página" estamos
-  // Ahora iniciamos en 'inicio' que es la página principal del hotel (en construcción)
   const [currentTab, setCurrentTab] = useState('inicio');
 
   return (
     <main style={{ backgroundColor: '#ffffff', minHeight: '100vh', fontFamily: 'sans-serif' }}>
       <Navbar activeTab={currentTab} setActiveTab={setCurrentTab} />
 
-      {/* --- PÁGINA: INICIO (Principal del Hotel) --- */}
+      {/* INICIO */}
       {currentTab === 'inicio' && (
-        <div style={{ paddingTop: '92px', minHeight: '60vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '20px' }}>
-          <h1 style={{ fontSize: '3rem', color: '#163A70', fontWeight: 300, textAlign: 'center' }}>
-            Bienvenido a <span style={{ fontWeight: 600 }}>Luna Nueva</span>
-          </h1>
-          <p style={{ color: '#64748b', fontSize: '18px' }}>Página principal del hotel en construcción...</p>
-          <p style={{ color: '#94a3b8', fontSize: '14px', marginTop: '20px' }}>
-            (Ve al menú <strong>NOSOTROS</strong> y selecciona <strong>Luna Bar</strong>, <strong>Catering</strong> o <strong>Restaurante</strong>)
-          </p>
-        </div>
+        <div style={PT}><Inicio setActiveTab={setCurrentTab} /></div>
       )}
 
-      {/* --- SUB-PÁGINA: LUNA BAR (Dentro de Nosotros) --- */}
+      {/* LUNA BAR */}
       {currentTab === 'luna-bar' && (
         <>
           <Hero />
-          {/* Separador */}
-          <div style={{ width: '100%', padding: '80px 0', backgroundColor: '#ffffff' }}>
-            <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 80px', display: 'flex', alignItems: 'center', gap: '24px' }}>
+          <div style={{ width: '100%', padding: '60px 0', backgroundColor: '#ffffff' }}>
+            <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 var(--section-px, 80px)', display: 'flex', alignItems: 'center', gap: '24px' }}>
               <div style={{ flex: 1, height: '1px', backgroundColor: '#e2e8f0' }} />
               <span style={{ fontSize: '11px', fontWeight: 600, letterSpacing: '0.35em', textTransform: 'uppercase', color: '#94a3b8', whiteSpace: 'nowrap' }}>
                 Luna Bar · Carta de Cócteles
@@ -48,31 +39,25 @@ function App() {
         </>
       )}
 
-      {/* --- SUB-PÁGINA: CATERING (Dentro de Nosotros) --- */}
+      {/* CATERING */}
       {currentTab === 'catering' && (
-        <div style={{ paddingTop: '92px' }}>
-          <Catering />
-        </div>
+        <div style={PT}><Catering /></div>
       )}
 
-      {/* --- SUB-PÁGINA: RESTAURANTE (Dentro de Nosotros) --- */}
+      {/* RESTAURANTE */}
       {currentTab === 'restaurante' && (
-        <div style={{ paddingTop: '92px' }}>
-          <Restaurante />
-        </div>
+        <div style={PT}><Restaurante /></div>
       )}
 
-      {/* --- PÁGINA: HABITACIONES --- */}
+      {/* HABITACIONES */}
       {currentTab === 'habitaciones' && (
-        <div style={{ paddingTop: '92px' }}>
-          <Habitaciones />
-        </div>
+        <div style={PT}><Habitaciones /></div>
       )}
 
-      {/* --- OTRAS PÁGINAS EN CONSTRUCCIÓN --- */}
+      {/* PÁGINAS EN CONSTRUCCIÓN */}
       {['servicios', 'promociones', 'contactanos'].includes(currentTab) && (
-        <div style={{ paddingTop: '92px', minHeight: '60vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-          <h2 style={{ fontSize: '2rem', color: '#163A70', fontWeight: 300 }}>
+        <div style={{ minHeight: '80vh', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '120px 20px' }}>
+          <h2 style={{ fontSize: 'clamp(1.5rem, 4vw, 2rem)', color: '#163A70', fontWeight: 300, textAlign: 'center' }}>
             Página de <span style={{ fontWeight: 600, textTransform: 'capitalize' }}>{currentTab.replace('-', ' ')}</span> en construcción
           </h2>
         </div>

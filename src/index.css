@@ -1,18 +1,24 @@
 @import "tailwindcss";
 
+/* ─── Design Tokens ────────────────────────────────────── */
 :root {
-  --color-bg-primary: #020617;
-  --color-bg-secondary: #0f172a;
-  --color-accent: #c9a96e;
-  --color-accent-soft: #e8d5b0;
-  --color-text-primary: #f1f5f9;
-  --color-text-muted: #64748b;
-  --font-primary: 'Inter', sans-serif;
+  --color-bg-primary:    #020617;
+  --color-bg-secondary:  #0f172a;
+  --color-accent:        #c9a96e;
+  --color-accent-soft:   #e8d5b0;
+  --color-text-primary:  #f1f5f9;
+  --color-text-muted:    #64748b;
+  --font-primary:        'Inter', sans-serif;
+
+  /* Spacing scale */
+  --section-px:   80px;
+  --section-py:   120px;
+  --grid-gap:     80px;
+  --card-radius:  24px;
 }
 
-*,
-*::before,
-*::after {
+/* ─── Reset ─────────────────────────────────────────────── */
+*, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -38,6 +44,263 @@ body {
   min-height: 100vh;
 }
 
-canvas {
-  display: block;
+canvas { display: block; }
+
+img { max-width: 100%; }
+
+/* ─── Responsive Utilities (used via className) ─────────── */
+
+/* Section wrapper */
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--section-px);
+}
+
+/* 2-column grid */
+.grid-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--grid-gap);
+  align-items: center;
+}
+
+/* Hero titles */
+.hero-title {
+  font-size: clamp(2.4rem, 6vw, 5rem);
+}
+.section-title {
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+}
+.hero-title-lg {
+  font-size: clamp(2.2rem, 6vw, 4.5rem);
+}
+
+/* Scrollbar hidden */
+.hide-scrollbar { scrollbar-width: none; }
+.hide-scrollbar::-webkit-scrollbar { display: none; }
+
+/* ─── Tablet (≤1024px) ───────────────────────────────────── */
+@media (max-width: 1024px) {
+  :root {
+    --section-px: 40px;
+    --section-py: 80px;
+    --grid-gap:   48px;
+  }
+
+  .grid-2col {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  /* Catering bento */
+  .catering-bento {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Restaurante showcase */
+  .restaurante-showcase {
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+    padding: 40px !important;
+  }
+
+  /* Testimonios */
+  .testimonios-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Inicio experiencias */
+  .experiencias-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  /* Inicio amenities */
+  .amenities-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  /* Footer grid */
+  .footer-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 40px !important;
+  }
+
+  /* Habitaciones */
+  .habitaciones-body {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+  .habitaciones-collage {
+    display: none !important;
+  }
+  .habitaciones-glass {
+    max-width: 100% !important;
+  }
+}
+
+/* ─── Mobile (≤640px) ────────────────────────────────────── */
+@media (max-width: 640px) {
+  :root {
+    --section-px: 20px;
+    --section-py: 60px;
+    --grid-gap:   32px;
+  }
+
+  /* Hero catering / restaurante font */
+  .catering-h1 {
+    font-size: 2.5rem !important;
+    line-height: 1.15 !important;
+  }
+  .restaurante-h1 {
+    font-size: 2.5rem !important;
+  }
+
+  /* Restaurante hero padding */
+  .restaurante-hero-content,
+  .catering-hero-content {
+    padding: 0 20px !important;
+  }
+
+  /* Restaurante intro layout */
+  .restaurante-intro {
+    padding: 60px 20px !important;
+  }
+  .restaurante-showcase-wrap {
+    padding: 60px 20px !important;
+  }
+  .restaurante-showcase {
+    grid-template-columns: 1fr !important;
+    padding: 24px !important;
+    border-radius: 24px !important;
+    gap: 32px !important;
+  }
+
+  /* Restaurante dish image */
+  .restaurante-dish-img {
+    width: 240px !important;
+    height: 240px !important;
+  }
+
+  /* Testimonios */
+  .testimonios-wrap {
+    padding: 60px 20px !important;
+  }
+
+  /* Catering sections */
+  .catering-quality-section {
+    padding: 60px 20px !important;
+  }
+  .catering-bento-wrap {
+    padding: 60px 0 !important;
+  }
+  .catering-bento-inner {
+    padding: 0 20px !important;
+  }
+  .catering-bento {
+    grid-template-columns: 1fr !important;
+  }
+  .catering-location-card {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+
+  /* Inicio hero buttons */
+  .hero-buttons {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 12px !important;
+  }
+  .hero-badge {
+    display: none !important;
+  }
+  .scroll-indicator {
+    display: none !important;
+  }
+
+  /* Inicio bienvenida */
+  .bienvenida-section {
+    padding: 60px 20px !important;
+  }
+  .bienvenida-badge-float {
+    left: -8px !important;
+    bottom: -16px !important;
+  }
+  .bienvenida-img-wrap {
+    height: 340px !important;
+  }
+
+  /* Inicio experiencias */
+  .experiencias-section {
+    padding: 60px 20px !important;
+  }
+  .experiencias-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Inicio amenities */
+  .amenities-section {
+    padding: 60px 20px !important;
+  }
+  .amenities-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  /* Inicio CTA */
+  .cta-section {
+    padding: 0 20px 60px !important;
+  }
+  .cta-box {
+    padding: 48px 28px !important;
+    border-radius: 20px !important;
+  }
+  .cta-buttons {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+  .cta-buttons a,
+  .cta-buttons button {
+    text-align: center !important;
+    padding: 16px 24px !important;
+  }
+
+  /* Habitaciones */
+  .habitaciones-header {
+    padding: 20px !important;
+  }
+  .habitaciones-main {
+    padding: 20px !important;
+  }
+  .habitaciones-glass {
+    padding: 28px !important;
+    max-width: 100% !important;
+  }
+  .habitaciones-glass h1 {
+    font-size: 2rem !important;
+  }
+  .habitaciones-attrs {
+    grid-template-columns: 1fr !important;
+  }
+  .habitaciones-track {
+    padding: 20px !important;
+  }
+
+  /* Footer */
+  .footer-body {
+    padding: 48px 20px !important;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+  .footer-bottom {
+    padding: 20px !important;
+    flex-direction: column !important;
+    text-align: center !important;
+  }
+
+  /* LunaBar showcase */
+  .lunabar-showcase {
+    padding: 40px 16px !important;
+  }
 }

@@ -63,8 +63,8 @@ export default function Footer() {
       <div style={{ height: '4px', background: 'linear-gradient(90deg, #163A70, #4a90d9, #163A70)' }} />
 
       {/* ── Cuerpo Principal ── */}
-      <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '72px 80px' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr 1fr', gap: '64px', alignItems: 'start' }}>
+      <div className="footer-body" style={{ maxWidth: '1200px', margin: '0 auto', padding: '72px var(--section-px, 80px)' }}>
+        <div className="footer-grid" style={{ display: 'grid', gridTemplateColumns: '2fr 1fr 1fr', gap: '64px', alignItems: 'start' }}>
 
           {/* ── Columna 1: Marca + Contacto + Redes ── */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '28px' }}>
@@ -185,7 +185,7 @@ export default function Footer() {
       </div>
 
       {/* ── Barra Inferior: Copyright ── */}
-      <div style={{ borderTop: '1px solid rgba(255,255,255,0.07)', padding: '24px 80px' }}>
+      <div className="footer-bottom" style={{ borderTop: '1px solid rgba(255,255,255,0.07)', padding: '24px var(--section-px, 80px)', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '12px' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '12px' }}>
           <span style={{ fontSize: '12px', color: '#475569' }}>
             © {year} Hotel Luna Nueva — Todos los derechos reservados.

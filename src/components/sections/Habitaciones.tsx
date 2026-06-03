@@ -107,7 +107,7 @@ export default function Habitaciones() {
   };
 
   return (
-    <section style={{ position: 'relative', width: '100%', minHeight: 'calc(100vh - 92px)', backgroundColor: '#0f1f3d', fontFamily: 'sans-serif' }}>
+    <section style={{ position: 'relative', width: '100%', minHeight: 'calc(100vh - 72px)', backgroundColor: '#0f1f3d', fontFamily: 'sans-serif' }}>
       
       {/* ── BACKGROUND DINÁMICO (Ken Burns Effect) ── */}
       <AnimatePresence mode="wait">
@@ -131,23 +131,23 @@ export default function Habitaciones() {
       </AnimatePresence>
 
       {/* ── CONTENIDO PRINCIPAL ── */}
-      <div style={{ position: 'relative', zIndex: 10, width: '100%', height: '100%', maxWidth: '1400px', margin: '0 auto', padding: '40px 80px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+      <div className="habitaciones-main" style={{ position: 'relative', zIndex: 10, width: '100%', height: '100%', maxWidth: '1400px', margin: '0 auto', padding: '32px var(--section-px, 80px)', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
         
         {/* Cabecera Pequeña */}
-        <div style={{ alignSelf: 'flex-start' }}>
-          <p style={{ color: '#4a90d9', fontWeight: 700, letterSpacing: '0.25em', fontSize: '13px', textTransform: 'uppercase', margin: '0 0 16px 0' }}>
+        <div className="habitaciones-header" style={{ alignSelf: 'flex-start' }}>
+          <p style={{ color: '#4a90d9', fontWeight: 700, letterSpacing: '0.25em', fontSize: '13px', textTransform: 'uppercase', margin: '0 0 12px 0' }}>
             Alojamiento de Lujo
           </p>
-          <h2 style={{ color: '#ffffff', fontSize: '40px', fontWeight: 300, margin: 0 }}>
+          <h2 style={{ color: '#ffffff', fontSize: 'clamp(1.6rem, 4vw, 2.5rem)', fontWeight: 300, margin: 0 }}>
             Nuestras <span style={{ fontWeight: 700 }}>Habitaciones</span>
           </h2>
         </div>
 
         {/* Cuerpo Principal: Panel Izquierdo y Collage Derecho */}
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%', gap: '40px' }}>
+        <div className="habitaciones-body" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', width: '100%', gap: '32px', flexWrap: 'wrap' }}>
           
           {/* Panel de Cristal Flotante (Glassmorphism) */}
-          <div style={{ width: '100%', maxWidth: '550px', backgroundColor: 'rgba(255, 255, 255, 0.1)', backdropFilter: 'blur(20px)', WebkitBackdropFilter: 'blur(20px)', borderRadius: '32px', padding: '48px', border: '1px solid rgba(255, 255, 255, 0.2)', boxShadow: '0 30px 60px -15px rgba(0, 0, 0, 0.5)' }}>
+          <div className="habitaciones-glass" style={{ width: '100%', maxWidth: '520px', backgroundColor: 'rgba(255,255,255,0.1)', backdropFilter: 'blur(20px)', WebkitBackdropFilter: 'blur(20px)', borderRadius: '32px', padding: '40px', border: '1px solid rgba(255,255,255,0.2)', boxShadow: '0 30px 60px -15px rgba(0,0,0,0.5)' }}>
           <AnimatePresence mode="wait">
             <motion.div
               key={activeRoom.id}
@@ -160,7 +160,7 @@ export default function Habitaciones() {
                 {activeRoom.type}
               </div>
               
-              <h1 style={{ color: '#ffffff', fontSize: '48px', fontWeight: 700, lineHeight: 1.1, marginBottom: '24px', margin: 0 }}>
+              <h1 style={{ color: '#ffffff', fontSize: 'clamp(1.75rem, 4vw, 3rem)', fontWeight: 700, lineHeight: 1.1, marginBottom: '24px', margin: 0 }}>
                 {activeRoom.name}
               </h1>
               
@@ -169,7 +169,7 @@ export default function Habitaciones() {
               </p>
 
               {/* Grid de Atributos */}
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px', marginBottom: '40px' }}>
+              <div className="habitaciones-attrs" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', marginBottom: '32px' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '12px', color: '#f8fafc' }}>
                   <div style={{ color: '#4a90d9' }}><Users size={20} /></div>
                   <span style={{ fontSize: '14px', fontWeight: 500 }}>{activeRoom.capacity}</span>
@@ -227,7 +227,7 @@ export default function Habitaciones() {
 
         {/* Collage de Fotos Extra (Derecha) */}
         {activeRoom.images.length > 1 && (
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '24px', maxWidth: '450px', width: '100%' }}>
+          <div className="habitaciones-collage" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px', maxWidth: '420px', width: '100%' }}>
             {activeRoom.images.map((img, idx) => (
               <div 
                 key={idx} 
@@ -254,7 +254,7 @@ export default function Habitaciones() {
       </div>
 
         {/* ── TRACK INFERIOR DE MINIATURAS ── */}
-        <div style={{ width: '100%', display: 'flex', gap: '16px', overflowX: 'auto', paddingBottom: '16px', scrollbarWidth: 'none' }}>
+        <div className="habitaciones-track hide-scrollbar" style={{ width: '100%', display: 'flex', gap: '12px', overflowX: 'auto', paddingBottom: '12px' }}>
           {ROOMS.map((room, index) => (
             <button
               key={room.id}
