@@ -1,0 +1,2011 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "label": "graphify.js",
+      "file_type": "code",
+      "source_file": ".opencode/plugins/graphify.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 9,
+      "norm_label": "graphify.js",
+      "id": "plugins_graphify"
+    },
+    {
+      "label": "GraphifyPlugin()",
+      "file_type": "code",
+      "source_file": ".opencode/plugins/graphify.js",
+      "source_location": "L6",
+      "_origin": "ast",
+      "community": 9,
+      "norm_label": "graphifyplugin()",
+      "id": "plugins_graphify_graphifyplugin"
+    },
+    {
+      "label": "eslint.config.js",
+      "file_type": "code",
+      "source_file": "eslint.config.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 10,
+      "norm_label": "eslint.config.js",
+      "id": "eslint_config"
+    },
+    {
+      "label": "package.json",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 6,
+      "norm_label": "package.json",
+      "id": "package"
+    },
+    {
+      "label": "name",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L2",
+      "_origin": "ast",
+      "community": 6,
+      "norm_label": "name",
+      "id": "package_name"
+    },
+    {
+      "label": "private",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L3",
+      "_origin": "ast",
+      "community": 6,
+      "norm_label": "private",
+      "id": "package_private"
+    },
+    {
+      "label": "version",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L4",
+      "_origin": "ast",
+      "community": 6,
+      "norm_label": "version",
+      "id": "package_version"
+    },
+    {
+      "label": "type",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L5",
+      "_origin": "ast",
+      "community": 6,
+      "norm_label": "type",
+      "id": "package_type"
+    },
+    {
+      "label": "scripts",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L6",
+      "_origin": "ast",
+      "community": 6,
+      "norm_label": "scripts",
+      "id": "package_scripts"
+    },
+    {
+      "label": "dev",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L7",
+      "_origin": "ast",
+      "community": 6,
+      "norm_label": "dev",
+      "id": "package_scripts_dev"
+    },
+    {
+      "label": "build",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L8",
+      "_origin": "ast",
+      "community": 6,
+      "norm_label": "build",
+      "id": "package_scripts_build"
+    },
+    {
+      "label": "lint",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L9",
+      "_origin": "ast",
+      "community": 6,
+      "norm_label": "lint",
+      "id": "package_scripts_lint"
+    },
+    {
+      "label": "preview",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L10",
+      "_origin": "ast",
+      "community": 6,
+      "norm_label": "preview",
+      "id": "package_scripts_preview"
+    },
+    {
+      "label": "dependencies",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L12",
+      "_origin": "ast",
+      "community": 1,
+      "norm_label": "dependencies",
+      "id": "package_dependencies"
+    },
+    {
+      "label": "@radix-ui/react-navigation-menu",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L13",
+      "_origin": "ast",
+      "community": 1,
+      "norm_label": "@radix-ui/react-navigation-menu",
+      "id": "package_dependencies_radix_ui_react_navigation_menu"
+    },
+    {
+      "label": "@react-three/fiber",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L14",
+      "_origin": "ast",
+      "community": 1,
+      "norm_label": "@react-three/fiber",
+      "id": "package_dependencies_react_three_fiber"
+    },
+    {
+      "label": "class-variance-authority",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L15",
+      "_origin": "ast",
+      "community": 1,
+      "norm_label": "class-variance-authority",
+      "id": "package_dependencies_class_variance_authority"
+    },
+    {
+      "label": "clsx",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L16",
+      "_origin": "ast",
+      "community": 1,
+      "norm_label": "clsx",
+      "id": "package_dependencies_clsx"
+    },
+    {
+      "label": "framer-motion",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L17",
+      "_origin": "ast",
+      "community": 1,
+      "norm_label": "framer-motion",
+      "id": "package_dependencies_framer_motion"
+    },
+    {
+      "label": "gsap",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L18",
+      "_origin": "ast",
+      "community": 1,
+      "norm_label": "gsap",
+      "id": "package_dependencies_gsap"
+    },
+    {
+      "label": "lucide-react",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L19",
+      "_origin": "ast",
+      "community": 1,
+      "norm_label": "lucide-react",
+      "id": "package_dependencies_lucide_react"
+    },
+    {
+      "label": "react",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L20",
+      "_origin": "ast",
+      "community": 1,
+      "norm_label": "react",
+      "id": "package_dependencies_react"
+    },
+    {
+      "label": "react-dom",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L21",
+      "_origin": "ast",
+      "community": 1,
+      "norm_label": "react-dom",
+      "id": "package_dependencies_react_dom"
+    },
+    {
+      "label": "tailwind-merge",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L22",
+      "_origin": "ast",
+      "community": 1,
+      "norm_label": "tailwind-merge",
+      "id": "package_dependencies_tailwind_merge"
+    },
+    {
+      "label": "three",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L23",
+      "_origin": "ast",
+      "community": 1,
+      "norm_label": "three",
+      "id": "package_dependencies_three"
+    },
+    {
+      "label": "devDependencies",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L25",
+      "_origin": "ast",
+      "community": 2,
+      "norm_label": "devdependencies",
+      "id": "package_devdependencies"
+    },
+    {
+      "label": "@eslint/js",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L26",
+      "_origin": "ast",
+      "community": 2,
+      "norm_label": "@eslint/js",
+      "id": "package_devdependencies_eslint_js"
+    },
+    {
+      "label": "@tailwindcss/vite",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L27",
+      "_origin": "ast",
+      "community": 2,
+      "norm_label": "@tailwindcss/vite",
+      "id": "package_devdependencies_tailwindcss_vite"
+    },
+    {
+      "label": "@types/react",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L28",
+      "_origin": "ast",
+      "community": 2,
+      "norm_label": "@types/react",
+      "id": "package_devdependencies_types_react"
+    },
+    {
+      "label": "@types/react-dom",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L29",
+      "_origin": "ast",
+      "community": 2,
+      "norm_label": "@types/react-dom",
+      "id": "package_devdependencies_types_react_dom"
+    },
+    {
+      "label": "@vitejs/plugin-react",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L30",
+      "_origin": "ast",
+      "community": 2,
+      "norm_label": "@vitejs/plugin-react",
+      "id": "package_devdependencies_vitejs_plugin_react"
+    },
+    {
+      "label": "eslint",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L31",
+      "_origin": "ast",
+      "community": 2,
+      "norm_label": "eslint",
+      "id": "package_devdependencies_eslint"
+    },
+    {
+      "label": "eslint-plugin-react-hooks",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L32",
+      "_origin": "ast",
+      "community": 2,
+      "norm_label": "eslint-plugin-react-hooks",
+      "id": "package_devdependencies_eslint_plugin_react_hooks"
+    },
+    {
+      "label": "eslint-plugin-react-refresh",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L33",
+      "_origin": "ast",
+      "community": 2,
+      "norm_label": "eslint-plugin-react-refresh",
+      "id": "package_devdependencies_eslint_plugin_react_refresh"
+    },
+    {
+      "label": "globals",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L34",
+      "_origin": "ast",
+      "community": 2,
+      "norm_label": "globals",
+      "id": "package_devdependencies_globals"
+    },
+    {
+      "label": "tailwindcss",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L35",
+      "_origin": "ast",
+      "community": 2,
+      "norm_label": "tailwindcss",
+      "id": "package_devdependencies_tailwindcss"
+    },
+    {
+      "label": "vite",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L36",
+      "_origin": "ast",
+      "community": 2,
+      "norm_label": "vite",
+      "id": "package_devdependencies_vite"
+    },
+    {
+      "label": "App.jsx",
+      "file_type": "code",
+      "source_file": "src/App.jsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "app.jsx",
+      "id": "src_app"
+    },
+    {
+      "label": "PT",
+      "file_type": "code",
+      "source_file": "src/App.jsx",
+      "source_location": "L11",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "pt",
+      "id": "src_app_pt"
+    },
+    {
+      "label": "App()",
+      "file_type": "code",
+      "source_file": "src/App.jsx",
+      "source_location": "L13",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "app()",
+      "id": "src_app_app"
+    },
+    {
+      "label": "Footer.tsx",
+      "file_type": "code",
+      "source_file": "src/components/layout/Footer.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 5,
+      "norm_label": "footer.tsx",
+      "id": "layout_footer"
+    },
+    {
+      "label": "InstagramIcon()",
+      "file_type": "code",
+      "source_file": "src/components/layout/Footer.tsx",
+      "source_location": "L5",
+      "_origin": "ast",
+      "community": 5,
+      "norm_label": "instagramicon()",
+      "id": "layout_footer_instagramicon"
+    },
+    {
+      "label": "FacebookIcon()",
+      "file_type": "code",
+      "source_file": "src/components/layout/Footer.tsx",
+      "source_location": "L13",
+      "_origin": "ast",
+      "community": 5,
+      "norm_label": "facebookicon()",
+      "id": "layout_footer_facebookicon"
+    },
+    {
+      "label": "TikTokIcon()",
+      "file_type": "code",
+      "source_file": "src/components/layout/Footer.tsx",
+      "source_location": "L19",
+      "_origin": "ast",
+      "community": 5,
+      "norm_label": "tiktokicon()",
+      "id": "layout_footer_tiktokicon"
+    },
+    {
+      "label": "BookingIcon()",
+      "file_type": "code",
+      "source_file": "src/components/layout/Footer.tsx",
+      "source_location": "L25",
+      "_origin": "ast",
+      "community": 5,
+      "norm_label": "bookingicon()",
+      "id": "layout_footer_bookingicon"
+    },
+    {
+      "label": "TrivagoIcon()",
+      "file_type": "code",
+      "source_file": "src/components/layout/Footer.tsx",
+      "source_location": "L31",
+      "_origin": "ast",
+      "community": 5,
+      "norm_label": "trivagoicon()",
+      "id": "layout_footer_trivagoicon"
+    },
+    {
+      "label": "SOCIAL_LINKS",
+      "file_type": "code",
+      "source_file": "src/components/layout/Footer.tsx",
+      "source_location": "L37",
+      "_origin": "ast",
+      "community": 5,
+      "norm_label": "social_links",
+      "id": "layout_footer_social_links"
+    },
+    {
+      "label": "NAV_COL",
+      "file_type": "code",
+      "source_file": "src/components/layout/Footer.tsx",
+      "source_location": "L46",
+      "_origin": "ast",
+      "community": 5,
+      "norm_label": "nav_col",
+      "id": "layout_footer_nav_col"
+    },
+    {
+      "label": "HORARIO",
+      "file_type": "code",
+      "source_file": "src/components/layout/Footer.tsx",
+      "source_location": "L50",
+      "_origin": "ast",
+      "community": 5,
+      "norm_label": "horario",
+      "id": "layout_footer_horario"
+    },
+    {
+      "label": "Footer()",
+      "file_type": "code",
+      "source_file": "src/components/layout/Footer.tsx",
+      "source_location": "L56",
+      "_origin": "ast",
+      "community": 5,
+      "norm_label": "footer()",
+      "id": "layout_footer_footer"
+    },
+    {
+      "label": "Navbar.tsx",
+      "file_type": "code",
+      "source_file": "src/components/layout/Navbar.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "navbar.tsx",
+      "id": "layout_navbar"
+    },
+    {
+      "label": "NAV_LINKS",
+      "file_type": "code",
+      "source_file": "src/components/layout/Navbar.tsx",
+      "source_location": "L13",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "nav_links",
+      "id": "layout_navbar_nav_links"
+    },
+    {
+      "label": "NavbarProps",
+      "file_type": "code",
+      "source_file": "src/components/layout/Navbar.tsx",
+      "source_location": "L30",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "navbarprops",
+      "id": "layout_navbar_navbarprops"
+    },
+    {
+      "label": "Navbar()",
+      "file_type": "code",
+      "source_file": "src/components/layout/Navbar.tsx",
+      "source_location": "L35",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "navbar()",
+      "id": "layout_navbar_navbar"
+    },
+    {
+      "label": "Catering.tsx",
+      "file_type": "code",
+      "source_file": "src/components/sections/Catering.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "catering.tsx",
+      "id": "sections_catering"
+    },
+    {
+      "label": "Catering()",
+      "file_type": "code",
+      "source_file": "src/components/sections/Catering.tsx",
+      "source_location": "L4",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "catering()",
+      "id": "sections_catering_catering"
+    },
+    {
+      "label": "Habitaciones.tsx",
+      "file_type": "code",
+      "source_file": "src/components/sections/Habitaciones.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "habitaciones.tsx",
+      "id": "sections_habitaciones"
+    },
+    {
+      "label": "ROOMS",
+      "file_type": "code",
+      "source_file": "src/components/sections/Habitaciones.tsx",
+      "source_location": "L7",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "rooms",
+      "id": "sections_habitaciones_rooms"
+    },
+    {
+      "label": "Habitaciones()",
+      "file_type": "code",
+      "source_file": "src/components/sections/Habitaciones.tsx",
+      "source_location": "L90",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "habitaciones()",
+      "id": "sections_habitaciones_habitaciones"
+    },
+    {
+      "label": "Hero.tsx",
+      "file_type": "code",
+      "source_file": "src/components/sections/Hero.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "hero.tsx",
+      "id": "sections_hero"
+    },
+    {
+      "label": "Hero()",
+      "file_type": "code",
+      "source_file": "src/components/sections/Hero.tsx",
+      "source_location": "L3",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "hero()",
+      "id": "sections_hero_hero"
+    },
+    {
+      "label": "Inicio.tsx",
+      "file_type": "code",
+      "source_file": "src/components/sections/Inicio.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 7,
+      "norm_label": "inicio.tsx",
+      "id": "sections_inicio"
+    },
+    {
+      "label": "fadeUp",
+      "file_type": "code",
+      "source_file": "src/components/sections/Inicio.tsx",
+      "source_location": "L5",
+      "_origin": "ast",
+      "community": 7,
+      "norm_label": "fadeup",
+      "id": "sections_inicio_fadeup"
+    },
+    {
+      "label": "stagger",
+      "file_type": "code",
+      "source_file": "src/components/sections/Inicio.tsx",
+      "source_location": "L10",
+      "_origin": "ast",
+      "community": 7,
+      "norm_label": "stagger",
+      "id": "sections_inicio_stagger"
+    },
+    {
+      "label": "RevealSection()",
+      "file_type": "code",
+      "source_file": "src/components/sections/Inicio.tsx",
+      "source_location": "L15",
+      "_origin": "ast",
+      "community": 7,
+      "norm_label": "revealsection()",
+      "id": "sections_inicio_revealsection"
+    },
+    {
+      "label": "EXPERIENCES",
+      "file_type": "code",
+      "source_file": "src/components/sections/Inicio.tsx",
+      "source_location": "L25",
+      "_origin": "ast",
+      "community": 7,
+      "norm_label": "experiences",
+      "id": "sections_inicio_experiences"
+    },
+    {
+      "label": "AMENITIES",
+      "file_type": "code",
+      "source_file": "src/components/sections/Inicio.tsx",
+      "source_location": "L32",
+      "_origin": "ast",
+      "community": 7,
+      "norm_label": "amenities",
+      "id": "sections_inicio_amenities"
+    },
+    {
+      "label": "InicioProps",
+      "file_type": "code",
+      "source_file": "src/components/sections/Inicio.tsx",
+      "source_location": "L39",
+      "_origin": "ast",
+      "community": 7,
+      "norm_label": "inicioprops",
+      "id": "sections_inicio_inicioprops"
+    },
+    {
+      "label": "Inicio()",
+      "file_type": "code",
+      "source_file": "src/components/sections/Inicio.tsx",
+      "source_location": "L43",
+      "_origin": "ast",
+      "community": 7,
+      "norm_label": "inicio()",
+      "id": "sections_inicio_inicio"
+    },
+    {
+      "label": "LunaBarShowcase.tsx",
+      "file_type": "code",
+      "source_file": "src/components/sections/LunaBarShowcase.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 4,
+      "norm_label": "lunabarshowcase.tsx",
+      "id": "sections_lunabarshowcase"
+    },
+    {
+      "label": "ProductId",
+      "file_type": "code",
+      "source_file": "src/components/sections/LunaBarShowcase.tsx",
+      "source_location": "L15",
+      "_origin": "ast",
+      "community": 4,
+      "norm_label": "productid",
+      "id": "sections_lunabarshowcase_productid"
+    },
+    {
+      "label": "FeatureMetric",
+      "file_type": "code",
+      "source_file": "src/components/sections/LunaBarShowcase.tsx",
+      "source_location": "L17",
+      "_origin": "ast",
+      "community": 4,
+      "norm_label": "featuremetric",
+      "id": "sections_lunabarshowcase_featuremetric"
+    },
+    {
+      "label": "ProductData",
+      "file_type": "code",
+      "source_file": "src/components/sections/LunaBarShowcase.tsx",
+      "source_location": "L23",
+      "_origin": "ast",
+      "community": 4,
+      "norm_label": "productdata",
+      "id": "sections_lunabarshowcase_productdata"
+    },
+    {
+      "label": "PRODUCT_DATA",
+      "file_type": "code",
+      "source_file": "src/components/sections/LunaBarShowcase.tsx",
+      "source_location": "L41",
+      "_origin": "ast",
+      "community": 4,
+      "norm_label": "product_data",
+      "id": "sections_lunabarshowcase_product_data"
+    },
+    {
+      "label": "ANIMATIONS",
+      "file_type": "code",
+      "source_file": "src/components/sections/LunaBarShowcase.tsx",
+      "source_location": "L125",
+      "_origin": "ast",
+      "community": 4,
+      "norm_label": "animations",
+      "id": "sections_lunabarshowcase_animations"
+    },
+    {
+      "label": "BackgroundGlow()",
+      "file_type": "code",
+      "source_file": "src/components/sections/LunaBarShowcase.tsx",
+      "source_location": "L146",
+      "_origin": "ast",
+      "community": 4,
+      "norm_label": "backgroundglow()",
+      "id": "sections_lunabarshowcase_backgroundglow"
+    },
+    {
+      "label": "ProductVisual()",
+      "file_type": "code",
+      "source_file": "src/components/sections/LunaBarShowcase.tsx",
+      "source_location": "L156",
+      "_origin": "ast",
+      "community": 4,
+      "norm_label": "productvisual()",
+      "id": "sections_lunabarshowcase_productvisual"
+    },
+    {
+      "label": "ProductDetails()",
+      "file_type": "code",
+      "source_file": "src/components/sections/LunaBarShowcase.tsx",
+      "source_location": "L203",
+      "_origin": "ast",
+      "community": 4,
+      "norm_label": "productdetails()",
+      "id": "sections_lunabarshowcase_productdetails"
+    },
+    {
+      "label": "Switcher()",
+      "file_type": "code",
+      "source_file": "src/components/sections/LunaBarShowcase.tsx",
+      "source_location": "L259",
+      "_origin": "ast",
+      "community": 4,
+      "norm_label": "switcher()",
+      "id": "sections_lunabarshowcase_switcher"
+    },
+    {
+      "label": "LunaBarShowcase()",
+      "file_type": "code",
+      "source_file": "src/components/sections/LunaBarShowcase.tsx",
+      "source_location": "L286",
+      "_origin": "ast",
+      "community": 4,
+      "norm_label": "lunabarshowcase()",
+      "id": "sections_lunabarshowcase_lunabarshowcase"
+    },
+    {
+      "label": "Restaurante.tsx",
+      "file_type": "code",
+      "source_file": "src/components/sections/Restaurante.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 8,
+      "norm_label": "restaurante.tsx",
+      "id": "sections_restaurante"
+    },
+    {
+      "label": "MENU_ITEMS",
+      "file_type": "code",
+      "source_file": "src/components/sections/Restaurante.tsx",
+      "source_location": "L5",
+      "_origin": "ast",
+      "community": 8,
+      "norm_label": "menu_items",
+      "id": "sections_restaurante_menu_items"
+    },
+    {
+      "label": "TESTIMONIALS",
+      "file_type": "code",
+      "source_file": "src/components/sections/Restaurante.tsx",
+      "source_location": "L12",
+      "_origin": "ast",
+      "community": 8,
+      "norm_label": "testimonials",
+      "id": "sections_restaurante_testimonials"
+    },
+    {
+      "label": "Restaurante()",
+      "file_type": "code",
+      "source_file": "src/components/sections/Restaurante.tsx",
+      "source_location": "L18",
+      "_origin": "ast",
+      "community": 8,
+      "norm_label": "restaurante()",
+      "id": "sections_restaurante_restaurante"
+    },
+    {
+      "label": "navigation-menu.tsx",
+      "file_type": "code",
+      "source_file": "src/components/ui/navigation-menu.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "navigation-menu.tsx",
+      "id": "ui_navigation_menu"
+    },
+    {
+      "label": "NavigationMenu()",
+      "file_type": "code",
+      "source_file": "src/components/ui/navigation-menu.tsx",
+      "source_location": "L9",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "navigationmenu()",
+      "id": "ui_navigation_menu_navigationmenu"
+    },
+    {
+      "label": "NavigationMenuList()",
+      "file_type": "code",
+      "source_file": "src/components/ui/navigation-menu.tsx",
+      "source_location": "L30",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "navigationmenulist()",
+      "id": "ui_navigation_menu_navigationmenulist"
+    },
+    {
+      "label": "NavigationMenuItem()",
+      "file_type": "code",
+      "source_file": "src/components/ui/navigation-menu.tsx",
+      "source_location": "L40",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "navigationmenuitem()",
+      "id": "ui_navigation_menu_navigationmenuitem"
+    },
+    {
+      "label": "navigationMenuTriggerStyle",
+      "file_type": "code",
+      "source_file": "src/components/ui/navigation-menu.tsx",
+      "source_location": "L46",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "navigationmenutriggerstyle",
+      "id": "ui_navigation_menu_navigationmenutriggerstyle"
+    },
+    {
+      "label": "NavigationMenuTrigger()",
+      "file_type": "code",
+      "source_file": "src/components/ui/navigation-menu.tsx",
+      "source_location": "L50",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "navigationmenutrigger()",
+      "id": "ui_navigation_menu_navigationmenutrigger"
+    },
+    {
+      "label": "NavigationMenuContent()",
+      "file_type": "code",
+      "source_file": "src/components/ui/navigation-menu.tsx",
+      "source_location": "L70",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "navigationmenucontent()",
+      "id": "ui_navigation_menu_navigationmenucontent"
+    },
+    {
+      "label": "NavigationMenuViewport()",
+      "file_type": "code",
+      "source_file": "src/components/ui/navigation-menu.tsx",
+      "source_location": "L84",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "navigationmenuviewport()",
+      "id": "ui_navigation_menu_navigationmenuviewport"
+    },
+    {
+      "label": "NavigationMenuLink()",
+      "file_type": "code",
+      "source_file": "src/components/ui/navigation-menu.tsx",
+      "source_location": "L102",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "navigationmenulink()",
+      "id": "ui_navigation_menu_navigationmenulink"
+    },
+    {
+      "label": "utils.ts",
+      "file_type": "code",
+      "source_file": "src/lib/utils.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "utils.ts",
+      "id": "lib_utils"
+    },
+    {
+      "label": "cn()",
+      "file_type": "code",
+      "source_file": "src/lib/utils.ts",
+      "source_location": "L4",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "cn()",
+      "id": "lib_utils_cn"
+    },
+    {
+      "label": "main.jsx",
+      "file_type": "code",
+      "source_file": "src/main.jsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "main.jsx",
+      "id": "src_main"
+    },
+    {
+      "label": "vite.config.js",
+      "file_type": "code",
+      "source_file": "vite.config.js",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 11,
+      "norm_label": "vite.config.js",
+      "id": "vite_config"
+    }
+  ],
+  "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".opencode/plugins/graphify.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "plugins_graphify",
+      "target": "plugins_graphify_graphifyplugin"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package",
+      "target": "package_dependencies"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L25",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package",
+      "target": "package_devdependencies"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package",
+      "target": "package_name"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package",
+      "target": "package_private"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package",
+      "target": "package_scripts"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package",
+      "target": "package_type"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package",
+      "target": "package_version"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_scripts",
+      "target": "package_scripts_build"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_scripts",
+      "target": "package_scripts_dev"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_scripts",
+      "target": "package_scripts_lint"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_scripts",
+      "target": "package_scripts_preview"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L15",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_class_variance_authority"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L16",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_clsx"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L17",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_framer_motion"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L18",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_gsap"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L19",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_lucide_react"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L13",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_radix_ui_react_navigation_menu"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L20",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_react"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L21",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_react_dom"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L14",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_react_three_fiber"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L22",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_tailwind_merge"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L23",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_three"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L31",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_eslint"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L26",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_eslint_js"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L32",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_eslint_plugin_react_hooks"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L33",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_eslint_plugin_react_refresh"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L34",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_globals"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L35",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_tailwindcss"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L27",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_tailwindcss_vite"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L28",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_types_react"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L29",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_types_react_dom"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L36",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_vite"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L30",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_vitejs_plugin_react"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.jsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_app",
+      "target": "layout_footer"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.jsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_app",
+      "target": "layout_navbar"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.jsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_app",
+      "target": "sections_catering"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.jsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_app",
+      "target": "sections_habitaciones"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.jsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_app",
+      "target": "sections_hero"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.jsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_app",
+      "target": "sections_inicio"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.jsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_app",
+      "target": "sections_lunabarshowcase"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.jsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_app",
+      "target": "sections_restaurante"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.jsx",
+      "source_location": "L13",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_app",
+      "target": "src_app_app"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/App.jsx",
+      "source_location": "L11",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_app",
+      "target": "src_app_pt"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main.jsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_main",
+      "target": "src_app"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main.jsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_main",
+      "target": "src_app_app"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/layout/Footer.tsx",
+      "source_location": "L25",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "layout_footer",
+      "target": "layout_footer_bookingicon"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/layout/Footer.tsx",
+      "source_location": "L13",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "layout_footer",
+      "target": "layout_footer_facebookicon"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/layout/Footer.tsx",
+      "source_location": "L56",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "layout_footer",
+      "target": "layout_footer_footer"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/layout/Footer.tsx",
+      "source_location": "L50",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "layout_footer",
+      "target": "layout_footer_horario"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/layout/Footer.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "layout_footer",
+      "target": "layout_footer_instagramicon"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/layout/Footer.tsx",
+      "source_location": "L46",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "layout_footer",
+      "target": "layout_footer_nav_col"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/layout/Footer.tsx",
+      "source_location": "L37",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "layout_footer",
+      "target": "layout_footer_social_links"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/layout/Footer.tsx",
+      "source_location": "L19",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "layout_footer",
+      "target": "layout_footer_tiktokicon"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/layout/Footer.tsx",
+      "source_location": "L31",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "layout_footer",
+      "target": "layout_footer_trivagoicon"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/layout/Navbar.tsx",
+      "source_location": "L13",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "layout_navbar",
+      "target": "layout_navbar_nav_links"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/layout/Navbar.tsx",
+      "source_location": "L35",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "layout_navbar",
+      "target": "layout_navbar_navbar"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/layout/Navbar.tsx",
+      "source_location": "L30",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "layout_navbar",
+      "target": "layout_navbar_navbarprops"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/sections/Catering.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "sections_catering",
+      "target": "sections_catering_catering"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/sections/Habitaciones.tsx",
+      "source_location": "L90",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "sections_habitaciones",
+      "target": "sections_habitaciones_habitaciones"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/sections/Habitaciones.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "sections_habitaciones",
+      "target": "sections_habitaciones_rooms"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/sections/Hero.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "sections_hero",
+      "target": "sections_hero_hero"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/sections/Inicio.tsx",
+      "source_location": "L32",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "sections_inicio",
+      "target": "sections_inicio_amenities"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/sections/Inicio.tsx",
+      "source_location": "L25",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "sections_inicio",
+      "target": "sections_inicio_experiences"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/sections/Inicio.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "sections_inicio",
+      "target": "sections_inicio_fadeup"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/sections/Inicio.tsx",
+      "source_location": "L43",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "sections_inicio",
+      "target": "sections_inicio_inicio"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/sections/Inicio.tsx",
+      "source_location": "L39",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "sections_inicio",
+      "target": "sections_inicio_inicioprops"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/sections/Inicio.tsx",
+      "source_location": "L15",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "sections_inicio",
+      "target": "sections_inicio_revealsection"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/sections/Inicio.tsx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "sections_inicio",
+      "target": "sections_inicio_stagger"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/sections/LunaBarShowcase.tsx",
+      "source_location": "L125",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "sections_lunabarshowcase",
+      "target": "sections_lunabarshowcase_animations"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/sections/LunaBarShowcase.tsx",
+      "source_location": "L146",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "sections_lunabarshowcase",
+      "target": "sections_lunabarshowcase_backgroundglow"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/sections/LunaBarShowcase.tsx",
+      "source_location": "L17",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "sections_lunabarshowcase",
+      "target": "sections_lunabarshowcase_featuremetric"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/sections/LunaBarShowcase.tsx",
+      "source_location": "L286",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "sections_lunabarshowcase",
+      "target": "sections_lunabarshowcase_lunabarshowcase"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/sections/LunaBarShowcase.tsx",
+      "source_location": "L41",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "sections_lunabarshowcase",
+      "target": "sections_lunabarshowcase_product_data"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/sections/LunaBarShowcase.tsx",
+      "source_location": "L23",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "sections_lunabarshowcase",
+      "target": "sections_lunabarshowcase_productdata"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/sections/LunaBarShowcase.tsx",
+      "source_location": "L203",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "sections_lunabarshowcase",
+      "target": "sections_lunabarshowcase_productdetails"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/sections/LunaBarShowcase.tsx",
+      "source_location": "L15",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "sections_lunabarshowcase",
+      "target": "sections_lunabarshowcase_productid"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/sections/LunaBarShowcase.tsx",
+      "source_location": "L156",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "sections_lunabarshowcase",
+      "target": "sections_lunabarshowcase_productvisual"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/sections/LunaBarShowcase.tsx",
+      "source_location": "L259",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "sections_lunabarshowcase",
+      "target": "sections_lunabarshowcase_switcher"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/sections/Restaurante.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "sections_restaurante",
+      "target": "sections_restaurante_menu_items"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/sections/Restaurante.tsx",
+      "source_location": "L18",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "sections_restaurante",
+      "target": "sections_restaurante_restaurante"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/sections/Restaurante.tsx",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "sections_restaurante",
+      "target": "sections_restaurante_testimonials"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ui/navigation-menu.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "ui_navigation_menu",
+      "target": "lib_utils"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ui/navigation-menu.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "ui_navigation_menu",
+      "target": "lib_utils_cn"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ui/navigation-menu.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "ui_navigation_menu",
+      "target": "ui_navigation_menu_navigationmenu"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ui/navigation-menu.tsx",
+      "source_location": "L70",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "ui_navigation_menu",
+      "target": "ui_navigation_menu_navigationmenucontent"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ui/navigation-menu.tsx",
+      "source_location": "L40",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "ui_navigation_menu",
+      "target": "ui_navigation_menu_navigationmenuitem"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ui/navigation-menu.tsx",
+      "source_location": "L102",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "ui_navigation_menu",
+      "target": "ui_navigation_menu_navigationmenulink"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ui/navigation-menu.tsx",
+      "source_location": "L30",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "ui_navigation_menu",
+      "target": "ui_navigation_menu_navigationmenulist"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ui/navigation-menu.tsx",
+      "source_location": "L50",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "ui_navigation_menu",
+      "target": "ui_navigation_menu_navigationmenutrigger"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ui/navigation-menu.tsx",
+      "source_location": "L46",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "ui_navigation_menu",
+      "target": "ui_navigation_menu_navigationmenutriggerstyle"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ui/navigation-menu.tsx",
+      "source_location": "L84",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "ui_navigation_menu",
+      "target": "ui_navigation_menu_navigationmenuviewport"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/ui/navigation-menu.tsx",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "ui_navigation_menu_navigationmenu",
+      "target": "lib_utils_cn"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/ui/navigation-menu.tsx",
+      "source_location": "L34",
+      "weight": 1.0,
+      "source": "ui_navigation_menu_navigationmenulist",
+      "target": "lib_utils_cn"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/ui/navigation-menu.tsx",
+      "source_location": "L42",
+      "weight": 1.0,
+      "source": "ui_navigation_menu_navigationmenuitem",
+      "target": "lib_utils_cn"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/ui/navigation-menu.tsx",
+      "source_location": "L58",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "ui_navigation_menu_navigationmenutrigger",
+      "target": "ui_navigation_menu_navigationmenutriggerstyle"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/ui/navigation-menu.tsx",
+      "source_location": "L58",
+      "weight": 1.0,
+      "source": "ui_navigation_menu_navigationmenutrigger",
+      "target": "lib_utils_cn"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/ui/navigation-menu.tsx",
+      "source_location": "L74",
+      "weight": 1.0,
+      "source": "ui_navigation_menu_navigationmenucontent",
+      "target": "lib_utils_cn"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/ui/navigation-menu.tsx",
+      "source_location": "L89",
+      "weight": 1.0,
+      "source": "ui_navigation_menu_navigationmenuviewport",
+      "target": "lib_utils_cn"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/ui/navigation-menu.tsx",
+      "source_location": "L106",
+      "weight": 1.0,
+      "source": "ui_navigation_menu_navigationmenulink",
+      "target": "lib_utils_cn"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/lib/utils.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "lib_utils",
+      "target": "lib_utils_cn"
+    }
+  ],
+  "hyperedges": [],
+  "built_at_commit": "7e461f39db142ecd3fab3a808d764459cc2adcfa"
+}

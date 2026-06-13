@@ -1,104 +1,135 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Users, Maximize, BedDouble, Wifi, Tv, Wind, Coffee, ChevronRight, MessageCircle, Bath, Droplets } from 'lucide-react';
+import {
+  Users,
+  Maximize,
+  BedDouble,
+  Wifi,
+  Tv,
+  Wind,
+  Coffee,
+  MessageCircle,
+  Bath,
+  Droplets,
+  ChevronRight,
+  ChevronLeft,
+  Star,
+  X,
+} from 'lucide-react';
 
-const WHATSAPP_NUMBER = "51967975109";
+const WHATSAPP_NUMBER = '51967975109';
+
+const ROOM_ACCENTS = ['#4a90d9', '#60a5fa', '#22c55e', '#f59e0b', '#a855f7'];
 
 const ROOMS = [
   {
     id: 'matrimonial-mar',
     name: 'Matrimonial Simple',
     type: 'Vista al Mar',
-    description: 'Las habitaciones matrimoniales frente al mar son estilo rústico y cuentan con balcón frente al mar. Gran elección para escapadas románticas o para disfrutar individualmente. Se encuentra disponible servicio a la habitación.',
+    description:
+      'Las habitaciones matrimoniales frente al mar son estilo rústico y cuentan con balcón frente al mar. Gran elección para escapadas románticas o para disfrutar individualmente. Se encuentra disponible servicio a la habitación.',
     capacity: '2 Personas',
     size: 'Balcón Frente al Mar',
     bed: '1 Cama de 2 Plazas',
     amenities: [
-      { icon: <Wifi size={20} />, label: 'WIFI' },
-      { icon: <Tv size={20} />, label: 'TV con Cable' },
-      { icon: <Droplets size={20} />, label: 'Piscina' },
-      { icon: <Coffee size={20} />, label: 'Minibar' },
-      { icon: <Bath size={20} />, label: 'Baño Privado' }
+      { icon: <Wifi size={18} />, label: 'WIFI' },
+      { icon: <Tv size={18} />, label: 'TV con Cable' },
+      { icon: <Droplets size={18} />, label: 'Piscina' },
+      { icon: <Coffee size={18} />, label: 'Minibar' },
+      { icon: <Bath size={18} />, label: 'Baño Privado' },
     ],
-    fallbackImg: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=2070&auto=format&fit=crop',
+    fallbackImg:
+      'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=2070&auto=format&fit=crop',
     images: [
       '/image/matrimonialsimplevistamar1.png',
       '/image/matrimonialsimplevistamar2.png',
       '/image/matrimonialsimplevistamar3.png',
-      '/image/matrimonialsimplevistamar4.png'
+      '/image/matrimonialsimplevistamar4.png',
     ],
   },
   {
     id: 'matrimonial-vip',
     name: 'Matrimonial VIP',
     type: 'Vista a la Piscina',
-    description: 'Lujo superior en nuestra suite VIP. Cuenta con diseño vanguardista, acabados premium y terraza directa con vista a la piscina iluminada.',
+    description:
+      'Lujo superior en nuestra suite VIP. Cuenta con diseño vanguardista, acabados premium y terraza directa con vista a la piscina iluminada.',
     capacity: '2 Personas',
     size: '45 m²',
     bed: '1 Cama Super King',
     amenities: [
-      { icon: <Wifi size={20} />, label: 'WIFI Alta Velocidad' },
-      { icon: <Wind size={20} />, label: 'Aire Acondicionado' }
+      { icon: <Wifi size={18} />, label: 'WIFI Alta Velocidad' },
+      { icon: <Wind size={18} />, label: 'Aire Acondicionado' },
     ],
-    fallbackImg: 'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?q=80&w=2070&auto=format&fit=crop',
+    fallbackImg:
+      'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?q=80&w=2070&auto=format&fit=crop',
     images: ['/image/hab-matrimonial-vip.png'],
   },
   {
     id: 'doble',
     name: 'Habitación Doble',
     type: 'Confort Superior',
-    description: 'Espacio versátil y muy iluminado, diseñado para amigos o colegas. Comodidad garantizada con camas independientes de alta gama.',
+    description:
+      'Espacio versátil y muy iluminado, diseñado para amigos o colegas. Comodidad garantizada con camas independientes de alta gama.',
     capacity: '2 Personas',
     size: '38 m²',
     bed: '2 Camas Queen',
-    amenities: [
-      { icon: <Wifi size={20} />, label: 'WIFI Alta Velocidad' }
-    ],
-    fallbackImg: 'https://images.unsplash.com/photo-1590490360182-c33d57733427?q=80&w=2074&auto=format&fit=crop',
+    amenities: [{ icon: <Wifi size={18} />, label: 'WIFI Alta Velocidad' }],
+    fallbackImg:
+      'https://images.unsplash.com/photo-1590490360182-c33d57733427?q=80&w=2074&auto=format&fit=crop',
     images: ['/image/hab-doble.png'],
   },
   {
     id: 'triple',
     name: 'Habitación Triple',
     type: 'Ideal para Grupos',
-    description: 'Amplia habitación pensada para la comodidad de grupos pequeños. Distribución inteligente que asegura descanso e independencia.',
+    description:
+      'Amplia habitación pensada para la comodidad de grupos pequeños. Distribución inteligente que asegura descanso e independencia.',
     capacity: '3 Personas',
     size: '42 m²',
     bed: '3 Camas 1.5 Plazas',
-    amenities: [
-      { icon: <Wifi size={20} />, label: 'WIFI Alta Velocidad' }
-    ],
-    fallbackImg: 'https://images.unsplash.com/photo-1566665797739-1674de7a421a?q=80&w=1974&auto=format&fit=crop',
+    amenities: [{ icon: <Wifi size={18} />, label: 'WIFI Alta Velocidad' }],
+    fallbackImg:
+      'https://images.unsplash.com/photo-1566665797739-1674de7a421a?q=80&w=1974&auto=format&fit=crop',
     images: ['/image/hab-triple.png'],
   },
   {
     id: 'cuadruple',
     name: 'Habitación Cuádruple',
     type: 'Espacio Familiar',
-    description: 'La opción perfecta para viajes en familia. Máximo espacio y confort, permitiendo que todos disfruten juntos sin sacrificar la privacidad personal.',
+    description:
+      'La opción perfecta para viajes en familia. Máximo espacio y confort, permitiendo que todos disfruten juntos sin sacrificar la privacidad personal.',
     capacity: '4 Personas',
     size: '50 m²',
     bed: '4 Camas 1.5 Plazas',
-    amenities: [
-      { icon: <Wifi size={20} />, label: 'WIFI Alta Velocidad' }
-    ],
-    fallbackImg: 'https://images.unsplash.com/photo-1576675784201-0e142b423952?q=80&w=2072&auto=format&fit=crop',
+    amenities: [{ icon: <Wifi size={18} />, label: 'WIFI Alta Velocidad' }],
+    fallbackImg:
+      'https://images.unsplash.com/photo-1576675784201-0e142b423952?q=80&w=2072&auto=format&fit=crop',
     images: ['/image/hab-cuadruple.png'],
-  }
+  },
 ];
 
 export default function Habitaciones() {
   const [activeRoomIndex, setActiveRoomIndex] = useState(0);
   const [modalImage, setModalImage] = useState<string | null>(null);
   const activeRoom = ROOMS[activeRoomIndex];
+  const activeAccent = ROOM_ACCENTS[activeRoomIndex % ROOM_ACCENTS.length];
 
-  // Pre-carga de imágenes de fallback
   useEffect(() => {
-    ROOMS.forEach(room => {
-      const img = new Image();
-      img.src = room.fallbackImg;
+    ROOMS.forEach((room) => {
+      const fallback = new Image();
+      fallback.src = room.fallbackImg;
+      const primary = new Image();
+      primary.src = room.images[0];
     });
   }, []);
+
+  const galleryImages = useMemo(() => {
+    const list = [...activeRoom.images];
+    if (list.length === 1) {
+      list.push(activeRoom.fallbackImg);
+    }
+    return list.slice(0, 4);
+  }, [activeRoom]);
 
   const handleWhatsApp = () => {
     const message = `Hola, deseo consultar disponibilidad y precios para la habitación: *${activeRoom.name} - ${activeRoom.type}*.`;
@@ -106,214 +137,789 @@ export default function Habitaciones() {
     window.open(url, '_blank');
   };
 
+  const goToPrevious = () => {
+    setActiveRoomIndex((prev) => (prev - 1 + ROOMS.length) % ROOMS.length);
+  };
+
+  const goToNext = () => {
+    setActiveRoomIndex((prev) => (prev + 1) % ROOMS.length);
+  };
+
   return (
-    <section style={{ position: 'relative', width: '100%', minHeight: 'calc(100vh - 72px)', backgroundColor: '#0f1f3d', fontFamily: 'sans-serif' }}>
-      
-      {/* ── BACKGROUND DINÁMICO (Ken Burns Effect) ── */}
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={activeRoom.id}
-          initial={{ opacity: 0, scale: 1.05 }}
-          animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 1.5, ease: 'easeInOut' }}
-          style={{ position: 'absolute', inset: 0, zIndex: 0 }}
-        >
-          <img 
-            src={activeRoom.images[0]} 
-            alt={activeRoom.name}
-            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-            onError={(e) => { e.currentTarget.src = activeRoom.fallbackImg; }}
-          />
-          {/* Gradiente Oscuro para legibilidad */}
-          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to right, rgba(15,31,61,0.95) 0%, rgba(15,31,61,0.6) 50%, rgba(15,31,61,0.2) 100%)' }} />
-        </motion.div>
-      </AnimatePresence>
+    <>
+      <style>{`
+        .rooms-root {
+          position: relative;
+          width: 100%;
+          min-height: calc(100vh - 72px);
+          overflow: hidden;
+          font-family: sans-serif;
+          isolation: isolate;
+        }
 
-      {/* ── CONTENIDO PRINCIPAL ── */}
-      <div className="habitaciones-main" style={{ position: 'relative', zIndex: 10, width: '100%', height: '100%', maxWidth: '1400px', margin: '0 auto', padding: '32px var(--section-px, 80px)', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
-        
-        {/* Cabecera Pequeña */}
-        <div className="habitaciones-header" style={{ alignSelf: 'flex-start' }}>
-          <p style={{ color: '#4a90d9', fontWeight: 700, letterSpacing: '0.25em', fontSize: '13px', textTransform: 'uppercase', margin: '0 0 12px 0' }}>
-            Alojamiento de Lujo
-          </p>
-          <h2 style={{ color: '#ffffff', fontSize: 'clamp(1.6rem, 4vw, 2.5rem)', fontWeight: 300, margin: 0 }}>
-            Nuestras <span style={{ fontWeight: 700 }}>Habitaciones</span>
-          </h2>
-        </div>
+        .rooms-backdrop {
+          position: absolute;
+          inset: 0;
+          z-index: 0;
+        }
 
-        {/* Cuerpo Principal: Panel Izquierdo y Collage Derecho */}
-        <div className="habitaciones-body" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', width: '100%', gap: '32px', flexWrap: 'wrap' }}>
-          
-          {/* Panel de Cristal Flotante (Glassmorphism) */}
-          <div className="habitaciones-glass" style={{ width: '100%', maxWidth: '520px', backgroundColor: 'rgba(255,255,255,0.1)', backdropFilter: 'blur(20px)', WebkitBackdropFilter: 'blur(20px)', borderRadius: '32px', padding: '40px', border: '1px solid rgba(255,255,255,0.2)', boxShadow: '0 30px 60px -15px rgba(0,0,0,0.5)' }}>
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={activeRoom.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.4 }}
-            >
-              <div style={{ display: 'inline-block', padding: '8px 16px', backgroundColor: 'rgba(74, 144, 217, 0.2)', color: '#60a5fa', borderRadius: '99px', fontSize: '12px', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '24px' }}>
-                {activeRoom.type}
-              </div>
-              
-              <h1 style={{ color: '#ffffff', fontSize: 'clamp(1.75rem, 4vw, 3rem)', fontWeight: 700, lineHeight: 1.1, marginBottom: '24px', margin: 0 }}>
-                {activeRoom.name}
-              </h1>
-              
-              <p style={{ color: '#e2e8f0', fontSize: '16px', lineHeight: 1.8, marginBottom: '32px' }}>
-                {activeRoom.description}
+        .rooms-backdrop img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transform: scale(1.05);
+        }
+
+        .rooms-backdrop-overlay {
+          position: absolute;
+          inset: 0;
+          background:
+            radial-gradient(circle at 78% 12%, rgba(74, 144, 217, 0.22), transparent 45%),
+            linear-gradient(110deg, rgba(10, 20, 40, 0.96) 0%, rgba(10, 20, 40, 0.72) 54%, rgba(10, 20, 40, 0.32) 100%);
+          backdrop-filter: blur(2px);
+        }
+
+        .rooms-shell {
+          position: relative;
+          z-index: 2;
+          max-width: 1440px;
+          margin: 0 auto;
+          padding: 36px var(--section-px, 80px) 56px;
+          display: flex;
+          flex-direction: column;
+          gap: 24px;
+        }
+
+        .rooms-header {
+          display: flex;
+          align-items: flex-end;
+          justify-content: space-between;
+          gap: 24px;
+          flex-wrap: wrap;
+        }
+
+        .rooms-eyebrow {
+          margin: 0 0 10px;
+          color: #7dd3fc;
+          font-size: 11px;
+          font-weight: 700;
+          letter-spacing: 0.28em;
+          text-transform: uppercase;
+        }
+
+        .rooms-heading {
+          margin: 0;
+          color: #f8fafc;
+          font-size: clamp(1.9rem, 4.3vw, 3.15rem);
+          line-height: 1.1;
+          font-weight: 300;
+        }
+
+        .rooms-heading strong {
+          font-weight: 700;
+        }
+
+        .rooms-subtext {
+          margin: 10px 0 0;
+          color: #cbd5e1;
+          max-width: 62ch;
+          font-size: 14px;
+          line-height: 1.75;
+        }
+
+        .rooms-switch-controls {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          flex-shrink: 0;
+        }
+
+        .rooms-switch-controls button {
+          width: 42px;
+          height: 42px;
+          border-radius: 12px;
+          border: 1px solid rgba(255, 255, 255, 0.25);
+          background: rgba(15, 23, 42, 0.45);
+          color: #e2e8f0;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          transition: all 0.25s ease;
+        }
+
+        .rooms-switch-controls button:hover {
+          transform: translateY(-2px);
+          background: rgba(30, 41, 59, 0.75);
+          border-color: rgba(255, 255, 255, 0.45);
+        }
+
+        .rooms-grid {
+          display: grid;
+          grid-template-columns: 340px 1fr;
+          gap: 24px;
+          align-items: start;
+        }
+
+        .rooms-selector {
+          background: rgba(15, 23, 42, 0.52);
+          border: 1px solid rgba(255, 255, 255, 0.12);
+          border-radius: 24px;
+          backdrop-filter: blur(16px);
+          box-shadow: 0 24px 48px -28px rgba(0, 0, 0, 0.75);
+          overflow: hidden;
+        }
+
+        .rooms-selector-head {
+          padding: 20px 20px 14px;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .rooms-selector-head h3 {
+          margin: 0 0 6px;
+          color: #f8fafc;
+          font-size: 15px;
+          font-weight: 700;
+          letter-spacing: 0.08em;
+          text-transform: uppercase;
+        }
+
+        .rooms-selector-head p {
+          margin: 0;
+          color: #94a3b8;
+          font-size: 13px;
+          line-height: 1.6;
+        }
+
+        .rooms-selector-list {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          max-height: 560px;
+          overflow-y: auto;
+          padding: 12px;
+        }
+
+        .rooms-selector-list::-webkit-scrollbar {
+          width: 7px;
+        }
+
+        .rooms-selector-list::-webkit-scrollbar-thumb {
+          background: rgba(148, 163, 184, 0.4);
+          border-radius: 999px;
+        }
+
+        .rooms-selector-item {
+          width: 100%;
+          border-radius: 16px;
+          border: 1px solid rgba(255, 255, 255, 0.11);
+          background: rgba(15, 23, 42, 0.34);
+          cursor: pointer;
+          padding: 10px;
+          text-align: left;
+          transition: all 0.25s ease;
+          color: #e2e8f0;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+        }
+
+        .rooms-selector-item:hover {
+          background: rgba(30, 41, 59, 0.62);
+          border-color: rgba(255, 255, 255, 0.28);
+        }
+
+        .rooms-selector-item.is-active {
+          background: rgba(30, 58, 138, 0.35);
+          border-color: rgba(147, 197, 253, 0.95);
+        }
+
+        .rooms-selector-thumb {
+          width: 72px;
+          height: 60px;
+          border-radius: 10px;
+          object-fit: cover;
+          flex-shrink: 0;
+          border: 1px solid rgba(255, 255, 255, 0.22);
+        }
+
+        .rooms-selector-meta {
+          min-width: 0;
+          display: flex;
+          flex-direction: column;
+          gap: 2px;
+        }
+
+        .rooms-selector-meta h4 {
+          margin: 0;
+          font-size: 13px;
+          font-weight: 700;
+          color: #f8fafc;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
+        .rooms-selector-meta p {
+          margin: 0;
+          font-size: 11px;
+          font-weight: 500;
+          letter-spacing: 0.06em;
+          text-transform: uppercase;
+          color: #93c5fd;
+        }
+
+        .rooms-selector-capacity {
+          margin-top: 3px;
+          color: #94a3b8;
+          font-size: 11px;
+          font-weight: 500;
+        }
+
+        .rooms-content {
+          display: flex;
+          flex-direction: column;
+          gap: 18px;
+        }
+
+        .rooms-hero-card {
+          border-radius: 28px;
+          overflow: hidden;
+          background: rgba(15, 23, 42, 0.52);
+          border: 1px solid rgba(255, 255, 255, 0.15);
+          backdrop-filter: blur(14px);
+          box-shadow: 0 30px 56px -34px rgba(0, 0, 0, 0.9);
+        }
+
+        .rooms-hero-media {
+          position: relative;
+          width: 100%;
+          min-height: 280px;
+          max-height: 420px;
+          overflow: hidden;
+        }
+
+        .rooms-hero-media img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        .rooms-hero-gradient {
+          position: absolute;
+          inset: 0;
+          background: linear-gradient(to top, rgba(10, 20, 40, 0.9) 0%, rgba(10, 20, 40, 0.32) 50%, rgba(10, 20, 40, 0.05) 100%);
+        }
+
+        .rooms-hero-badge {
+          position: absolute;
+          top: 18px;
+          left: 18px;
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          padding: 8px 12px;
+          border-radius: 999px;
+          background: rgba(15, 23, 42, 0.7);
+          border: 1px solid rgba(255, 255, 255, 0.25);
+          color: #e2e8f0;
+          font-size: 11px;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          font-weight: 700;
+        }
+
+        .rooms-hero-body {
+          padding: 26px;
+          display: flex;
+          flex-direction: column;
+          gap: 18px;
+        }
+
+        .rooms-room-type {
+          margin: 0;
+          color: #7dd3fc;
+          font-size: 11px;
+          font-weight: 700;
+          letter-spacing: 0.22em;
+          text-transform: uppercase;
+        }
+
+        .rooms-room-title {
+          margin: 0;
+          color: #ffffff;
+          font-size: clamp(1.5rem, 3.2vw, 2.2rem);
+          font-weight: 700;
+          line-height: 1.15;
+        }
+
+        .rooms-room-desc {
+          margin: 0;
+          color: #cbd5e1;
+          line-height: 1.8;
+          font-size: 15px;
+          max-width: 80ch;
+        }
+
+        .rooms-facts {
+          display: grid;
+          grid-template-columns: repeat(3, minmax(140px, 1fr));
+          gap: 10px;
+        }
+
+        .rooms-fact {
+          border-radius: 14px;
+          border: 1px solid rgba(255, 255, 255, 0.15);
+          background: rgba(255, 255, 255, 0.04);
+          padding: 10px 12px;
+          color: #e2e8f0;
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          font-size: 13px;
+          font-weight: 600;
+        }
+
+        .rooms-fact svg {
+          color: #7dd3fc;
+          flex-shrink: 0;
+        }
+
+        .rooms-amenities {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 8px;
+        }
+
+        .rooms-amenity {
+          display: inline-flex;
+          align-items: center;
+          gap: 7px;
+          border-radius: 999px;
+          border: 1px solid rgba(255, 255, 255, 0.14);
+          background: rgba(255, 255, 255, 0.04);
+          color: #e2e8f0;
+          font-size: 12px;
+          font-weight: 600;
+          padding: 8px 12px;
+        }
+
+        .rooms-amenity svg {
+          color: #7dd3fc;
+        }
+
+        .rooms-actions {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 10px;
+          margin-top: 4px;
+        }
+
+        .rooms-whatsapp-btn {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          gap: 8px;
+          border: none;
+          border-radius: 12px;
+          padding: 13px 18px;
+          cursor: pointer;
+          color: #ffffff;
+          font-size: 12px;
+          font-weight: 700;
+          letter-spacing: 0.11em;
+          text-transform: uppercase;
+          background: #22c55e;
+          transition: all 0.25s ease;
+        }
+
+        .rooms-whatsapp-btn:hover {
+          transform: translateY(-2px);
+          background: #16a34a;
+        }
+
+        .rooms-view-btn {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          gap: 6px;
+          border-radius: 12px;
+          border: 1px solid rgba(255, 255, 255, 0.28);
+          background: rgba(15, 23, 42, 0.28);
+          color: #e2e8f0;
+          font-size: 12px;
+          font-weight: 700;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          cursor: pointer;
+          padding: 13px 16px;
+          transition: all 0.25s ease;
+        }
+
+        .rooms-view-btn:hover {
+          border-color: rgba(255, 255, 255, 0.5);
+          background: rgba(30, 41, 59, 0.7);
+        }
+
+        .rooms-gallery {
+          display: grid;
+          grid-template-columns: repeat(4, minmax(0, 1fr));
+          gap: 10px;
+        }
+
+        .rooms-gallery-item {
+          border: 1px solid rgba(255, 255, 255, 0.16);
+          border-radius: 14px;
+          overflow: hidden;
+          cursor: pointer;
+          background: rgba(15, 23, 42, 0.4);
+          transition: transform 0.25s ease, border-color 0.25s ease;
+        }
+
+        .rooms-gallery-item:hover {
+          transform: translateY(-2px);
+          border-color: rgba(255, 255, 255, 0.44);
+        }
+
+        .rooms-gallery-item img {
+          width: 100%;
+          height: 110px;
+          object-fit: cover;
+          display: block;
+        }
+
+        .rooms-modal {
+          position: fixed;
+          inset: 0;
+          z-index: 99999;
+          background: rgba(2, 6, 23, 0.92);
+          backdrop-filter: blur(8px);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 28px;
+        }
+
+        .rooms-modal-close {
+          position: absolute;
+          top: 20px;
+          right: 20px;
+          width: 44px;
+          height: 44px;
+          border-radius: 999px;
+          border: 1px solid rgba(255, 255, 255, 0.35);
+          background: rgba(15, 23, 42, 0.65);
+          color: #f8fafc;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          transition: background 0.25s ease;
+        }
+
+        .rooms-modal-close:hover {
+          background: rgba(30, 41, 59, 0.9);
+        }
+
+        .rooms-modal img {
+          max-width: min(94vw, 1200px);
+          max-height: 88vh;
+          border-radius: 16px;
+          object-fit: contain;
+          box-shadow: 0 40px 80px rgba(0, 0, 0, 0.6);
+          border: 1px solid rgba(255, 255, 255, 0.22);
+        }
+
+        @media (max-width: 1250px) {
+          .rooms-grid {
+            grid-template-columns: 300px 1fr;
+          }
+        }
+
+        @media (max-width: 1024px) {
+          .rooms-shell {
+            padding: 28px var(--section-px, 40px) 44px;
+          }
+
+          .rooms-grid {
+            grid-template-columns: 1fr;
+          }
+
+          .rooms-selector-list {
+            max-height: 300px;
+          }
+        }
+
+        @media (max-width: 768px) {
+          .rooms-shell {
+            padding: 24px var(--section-px, 24px) 34px;
+          }
+
+          .rooms-subtext {
+            font-size: 13px;
+          }
+
+          .rooms-hero-body {
+            padding: 20px;
+          }
+
+          .rooms-facts {
+            grid-template-columns: 1fr;
+          }
+
+          .rooms-gallery {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+          }
+        }
+
+        @media (max-width: 640px) {
+          .rooms-shell {
+            padding: 20px var(--section-px, 20px) 30px;
+            gap: 18px;
+          }
+
+          .rooms-header {
+            gap: 14px;
+          }
+
+          .rooms-switch-controls button {
+            width: 38px;
+            height: 38px;
+          }
+
+          .rooms-selector-item {
+            padding: 8px;
+          }
+
+          .rooms-selector-thumb {
+            width: 64px;
+            height: 54px;
+          }
+
+          .rooms-hero-media {
+            min-height: 220px;
+          }
+
+          .rooms-actions {
+            flex-direction: column;
+          }
+
+          .rooms-whatsapp-btn,
+          .rooms-view-btn {
+            width: 100%;
+          }
+        }
+      `}</style>
+
+      <section className="rooms-root">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={activeRoom.id}
+            className="rooms-backdrop"
+            initial={{ opacity: 0, scale: 1.08 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.7, ease: 'easeOut' }}
+          >
+            <img
+              src={activeRoom.images[0]}
+              alt={activeRoom.name}
+              onError={(e) => {
+                e.currentTarget.src = activeRoom.fallbackImg;
+              }}
+            />
+            <div className="rooms-backdrop-overlay" />
+          </motion.div>
+        </AnimatePresence>
+
+        <div className="rooms-shell">
+          <motion.header
+            className="rooms-header"
+            initial={{ opacity: 0, y: 14 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <div>
+              <p className="rooms-eyebrow">Alojamiento Premium · Frente al Mar</p>
+              <h2 className="rooms-heading">
+                Habitaciones con <strong>estilo y confort</strong>
+              </h2>
+              <p className="rooms-subtext">
+                Explora cada categoría, compara comodidades y reserva la opción ideal para tu
+                estancia en Luna Nueva con una experiencia visual más clara y profesional.
               </p>
+            </div>
 
-              {/* Grid de Atributos */}
-              <div className="habitaciones-attrs" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', marginBottom: '32px' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '12px', color: '#f8fafc' }}>
-                  <div style={{ color: '#4a90d9' }}><Users size={20} /></div>
-                  <span style={{ fontSize: '14px', fontWeight: 500 }}>{activeRoom.capacity}</span>
-                </div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '12px', color: '#f8fafc' }}>
-                  <div style={{ color: '#4a90d9' }}><Maximize size={20} /></div>
-                  <span style={{ fontSize: '14px', fontWeight: 500 }}>{activeRoom.size}</span>
-                </div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '12px', color: '#f8fafc' }}>
-                  <div style={{ color: '#4a90d9' }}><BedDouble size={20} /></div>
-                  <span style={{ fontSize: '14px', fontWeight: 500 }}>{activeRoom.bed}</span>
-                </div>
-                
-                {/* Amenidades Extras */}
-                {activeRoom.amenities.map((amenity, idx) => (
-                  <div key={idx} style={{ display: 'flex', alignItems: 'center', gap: '12px', color: '#f8fafc' }}>
-                    <div style={{ color: '#4a90d9' }}>{amenity.icon}</div>
-                    <span style={{ fontSize: '14px', fontWeight: 500 }}>{amenity.label}</span>
+            <div className="rooms-switch-controls">
+              <button onClick={goToPrevious} aria-label="Habitación anterior">
+                <ChevronLeft size={18} />
+              </button>
+              <button onClick={goToNext} aria-label="Siguiente habitación">
+                <ChevronRight size={18} />
+              </button>
+            </div>
+          </motion.header>
+
+          <div className="rooms-grid">
+            <aside className="rooms-selector">
+              <div className="rooms-selector-head">
+                <h3>Categorías</h3>
+                <p>Selecciona una habitación para ver todos los detalles.</p>
+              </div>
+
+              <div className="rooms-selector-list">
+                {ROOMS.map((room, index) => {
+                  const isActive = activeRoomIndex === index;
+                  return (
+                    <button
+                      key={room.id}
+                      onClick={() => setActiveRoomIndex(index)}
+                      className={`rooms-selector-item${isActive ? ' is-active' : ''}`}
+                      style={
+                        isActive
+                          ? {
+                              borderColor: activeAccent,
+                              boxShadow: `0 16px 28px -22px ${activeAccent}`,
+                            }
+                          : undefined
+                      }
+                    >
+                      <img
+                        src={room.images[0]}
+                        alt={room.name}
+                        className="rooms-selector-thumb"
+                        onError={(e) => {
+                          e.currentTarget.src = room.fallbackImg;
+                        }}
+                      />
+                      <span className="rooms-selector-meta">
+                        <h4>{room.name}</h4>
+                        <p>{room.type}</p>
+                        <span className="rooms-selector-capacity">{room.capacity}</span>
+                      </span>
+                    </button>
+                  );
+                })}
+              </div>
+            </aside>
+
+            <div className="rooms-content">
+              <AnimatePresence mode="wait">
+                <motion.article
+                  key={activeRoom.id}
+                  className="rooms-hero-card"
+                  initial={{ opacity: 0, y: 14 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -12 }}
+                  transition={{ duration: 0.35 }}
+                >
+                  <div className="rooms-hero-media">
+                    <img
+                      src={activeRoom.images[0]}
+                      alt={activeRoom.name}
+                      onError={(e) => {
+                        e.currentTarget.src = activeRoom.fallbackImg;
+                      }}
+                    />
+                    <div className="rooms-hero-gradient" />
+                    <div className="rooms-hero-badge">
+                      <Star size={12} style={{ color: activeAccent }} />
+                      Recomendado
+                    </div>
                   </div>
+
+                  <div className="rooms-hero-body">
+                    <p className="rooms-room-type">{activeRoom.type}</p>
+                    <h3 className="rooms-room-title">{activeRoom.name}</h3>
+                    <p className="rooms-room-desc">{activeRoom.description}</p>
+
+                    <div className="rooms-facts">
+                      <div className="rooms-fact">
+                        <Users size={16} />
+                        {activeRoom.capacity}
+                      </div>
+                      <div className="rooms-fact">
+                        <Maximize size={16} />
+                        {activeRoom.size}
+                      </div>
+                      <div className="rooms-fact">
+                        <BedDouble size={16} />
+                        {activeRoom.bed}
+                      </div>
+                    </div>
+
+                    <div className="rooms-amenities">
+                      {activeRoom.amenities.map((amenity, idx) => (
+                        <span key={idx} className="rooms-amenity">
+                          {amenity.icon}
+                          {amenity.label}
+                        </span>
+                      ))}
+                    </div>
+
+                    <div className="rooms-actions">
+                      <button className="rooms-whatsapp-btn" onClick={handleWhatsApp}>
+                        <MessageCircle size={18} />
+                        Reservar por WhatsApp
+                      </button>
+                      <button className="rooms-view-btn" onClick={() => setModalImage(activeRoom.images[0])}>
+                        Ver foto principal
+                        <ChevronRight size={14} />
+                      </button>
+                    </div>
+                  </div>
+                </motion.article>
+              </AnimatePresence>
+
+              <div className="rooms-gallery">
+                {galleryImages.map((img, idx) => (
+                  <button key={`${activeRoom.id}-gallery-${idx}`} className="rooms-gallery-item" onClick={() => setModalImage(img)}>
+                    <img
+                      src={img}
+                      alt={`${activeRoom.name} vista ${idx + 1}`}
+                      onError={(e) => {
+                        e.currentTarget.src = activeRoom.fallbackImg;
+                      }}
+                    />
+                  </button>
                 ))}
               </div>
-
-              {/* Botón WhatsApp */}
-              <button 
-                onClick={handleWhatsApp}
-                style={{ 
-                  width: '100%', 
-                  backgroundColor: '#25D366', 
-                  color: '#ffffff', 
-                  padding: '18px 32px', 
-                  borderRadius: '16px', 
-                  fontSize: '15px', 
-                  fontWeight: 700, 
-                  letterSpacing: '0.05em', 
-                  textTransform: 'uppercase', 
-                  border: 'none', 
-                  cursor: 'pointer',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  gap: '12px',
-                  boxShadow: '0 10px 25px -5px rgba(37, 211, 102, 0.4)',
-                  transition: 'transform 0.2s, backgroundColor 0.2s'
-                }}
-                onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = '#1fad53'; e.currentTarget.style.transform = 'translateY(-2px)'; }}
-                onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = '#25D366'; e.currentTarget.style.transform = 'translateY(0)'; }}
-              >
-                <MessageCircle size={22} />
-                Reservar por WhatsApp
-              </button>
-
-            </motion.div>
-          </AnimatePresence>
-        </div>
-
-        {/* Collage de Fotos Extra (Derecha) */}
-        {activeRoom.images.length > 1 && (
-          <div className="habitaciones-collage" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px', maxWidth: '420px', width: '100%' }}>
-            {activeRoom.images.map((img, idx) => (
-              <div 
-                key={idx} 
-                onClick={() => setModalImage(img)}
-                style={{ 
-                  width: '100%', 
-                  aspectRatio: '1', 
-                  borderRadius: '24px', 
-                  overflow: 'hidden', 
-                  cursor: 'pointer',
-                  boxShadow: '0 20px 40px -10px rgba(0,0,0,0.5)',
-                  border: '2px solid rgba(255,255,255,0.2)',
-                  transition: 'transform 0.3s ease, border-color 0.3s ease'
-                }}
-                onMouseEnter={(e) => { e.currentTarget.style.transform = 'scale(1.05)'; e.currentTarget.style.borderColor = '#ffffff'; }}
-                onMouseLeave={(e) => { e.currentTarget.style.transform = 'scale(1)'; e.currentTarget.style.borderColor = 'rgba(255,255,255,0.2)'; }}
-              >
-                <img src={img} alt={`Vista ${idx + 2}`} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-              </div>
-            ))}
+            </div>
           </div>
-        )}
-
-      </div>
-
-        {/* ── TRACK INFERIOR DE MINIATURAS ── */}
-        <div className="habitaciones-track hide-scrollbar" style={{ width: '100%', display: 'flex', gap: '12px', overflowX: 'auto', paddingBottom: '12px' }}>
-          {ROOMS.map((room, index) => (
-            <button
-              key={room.id}
-              onClick={() => setActiveRoomIndex(index)}
-              style={{
-                flex: '0 0 220px',
-                height: '100px',
-                position: 'relative',
-                borderRadius: '16px',
-                overflow: 'hidden',
-                border: activeRoomIndex === index ? '2px solid #ffffff' : '2px solid transparent',
-                cursor: 'pointer',
-                transition: 'all 0.3s ease',
-                opacity: activeRoomIndex === index ? 1 : 0.6,
-                padding: 0
-              }}
-              onMouseEnter={(e) => { if (activeRoomIndex !== index) e.currentTarget.style.opacity = '1'; }}
-              onMouseLeave={(e) => { if (activeRoomIndex !== index) e.currentTarget.style.opacity = '0.6'; }}
-            >
-              <img 
-                src={room.images[0]} 
-                alt={room.name} 
-                style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
-                onError={(e) => { e.currentTarget.src = room.fallbackImg; }}
-              />
-              <div style={{ position: 'absolute', inset: 0, backgroundColor: 'rgba(15,31,61,0.5)', display: 'flex', alignItems: 'flex-end', padding: '12px' }}>
-                <span style={{ color: '#ffffff', fontSize: '12px', fontWeight: 700, textAlign: 'left', lineHeight: 1.2 }}>
-                  {room.name}
-                </span>
-              </div>
-            </button>
-          ))}
         </div>
 
-      </div>
-
-      {/* ── LIGHTBOX (MODAL DE IMAGEN) ── */}
-      <AnimatePresence>
-        {modalImage && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            style={{ position: 'fixed', inset: 0, zIndex: 99999, backgroundColor: 'rgba(15,31,61,0.95)', backdropFilter: 'blur(10px)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '40px' }}
-            onClick={() => setModalImage(null)}
-          >
-            <motion.img 
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
-              transition={{ type: 'spring', damping: 25, stiffness: 300 }}
-              src={modalImage} 
-              alt="Vista Completa" 
-              style={{ maxHeight: '90vh', maxWidth: '90vw', objectFit: 'contain', borderRadius: '16px', boxShadow: '0 25px 50px -12px rgba(0,0,0,0.5)' }} 
-            />
-          </motion.div>
-        )}
-      </AnimatePresence>
-
-    </section>
+        <AnimatePresence>
+          {modalImage && (
+            <motion.div
+              className="rooms-modal"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setModalImage(null)}
+            >
+              <button
+                className="rooms-modal-close"
+                aria-label="Cerrar imagen"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setModalImage(null);
+                }}
+              >
+                <X size={20} />
+              </button>
+              <motion.img
+                src={modalImage}
+                alt="Vista ampliada de habitación"
+                initial={{ scale: 0.94, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                exit={{ scale: 0.94, opacity: 0 }}
+                transition={{ duration: 0.22 }}
+                onClick={(e) => e.stopPropagation()}
+              />
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </section>
+    </>
   );
 }

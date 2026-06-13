@@ -1,0 +1,252 @@
+{
+  "communities": {
+    "0": [
+      "layout_navbar",
+      "layout_navbar_nav_links",
+      "layout_navbar_navbar",
+      "layout_navbar_navbarprops",
+      "sections_catering",
+      "sections_catering_catering",
+      "sections_habitaciones",
+      "sections_habitaciones_habitaciones",
+      "sections_habitaciones_rooms",
+      "sections_hero",
+      "sections_hero_hero",
+      "src_app",
+      "src_app_app",
+      "src_app_pt",
+      "src_main"
+    ],
+    "1": [
+      "package_dependencies",
+      "package_dependencies_class_variance_authority",
+      "package_dependencies_clsx",
+      "package_dependencies_framer_motion",
+      "package_dependencies_gsap",
+      "package_dependencies_lucide_react",
+      "package_dependencies_radix_ui_react_navigation_menu",
+      "package_dependencies_react",
+      "package_dependencies_react_dom",
+      "package_dependencies_react_three_fiber",
+      "package_dependencies_tailwind_merge",
+      "package_dependencies_three"
+    ],
+    "2": [
+      "package_devdependencies",
+      "package_devdependencies_eslint",
+      "package_devdependencies_eslint_js",
+      "package_devdependencies_eslint_plugin_react_hooks",
+      "package_devdependencies_eslint_plugin_react_refresh",
+      "package_devdependencies_globals",
+      "package_devdependencies_tailwindcss",
+      "package_devdependencies_tailwindcss_vite",
+      "package_devdependencies_types_react",
+      "package_devdependencies_types_react_dom",
+      "package_devdependencies_vite",
+      "package_devdependencies_vitejs_plugin_react"
+    ],
+    "3": [
+      "lib_utils",
+      "lib_utils_cn",
+      "ui_navigation_menu",
+      "ui_navigation_menu_navigationmenu",
+      "ui_navigation_menu_navigationmenucontent",
+      "ui_navigation_menu_navigationmenuitem",
+      "ui_navigation_menu_navigationmenulink",
+      "ui_navigation_menu_navigationmenulist",
+      "ui_navigation_menu_navigationmenutrigger",
+      "ui_navigation_menu_navigationmenutriggerstyle",
+      "ui_navigation_menu_navigationmenuviewport"
+    ],
+    "4": [
+      "sections_lunabarshowcase",
+      "sections_lunabarshowcase_animations",
+      "sections_lunabarshowcase_backgroundglow",
+      "sections_lunabarshowcase_featuremetric",
+      "sections_lunabarshowcase_lunabarshowcase",
+      "sections_lunabarshowcase_product_data",
+      "sections_lunabarshowcase_productdata",
+      "sections_lunabarshowcase_productdetails",
+      "sections_lunabarshowcase_productid",
+      "sections_lunabarshowcase_productvisual",
+      "sections_lunabarshowcase_switcher"
+    ],
+    "5": [
+      "layout_footer",
+      "layout_footer_bookingicon",
+      "layout_footer_facebookicon",
+      "layout_footer_footer",
+      "layout_footer_horario",
+      "layout_footer_instagramicon",
+      "layout_footer_nav_col",
+      "layout_footer_social_links",
+      "layout_footer_tiktokicon",
+      "layout_footer_trivagoicon"
+    ],
+    "6": [
+      "package",
+      "package_name",
+      "package_private",
+      "package_scripts",
+      "package_scripts_build",
+      "package_scripts_dev",
+      "package_scripts_lint",
+      "package_scripts_preview",
+      "package_type",
+      "package_version"
+    ],
+    "7": [
+      "sections_inicio",
+      "sections_inicio_amenities",
+      "sections_inicio_experiences",
+      "sections_inicio_fadeup",
+      "sections_inicio_inicio",
+      "sections_inicio_inicioprops",
+      "sections_inicio_revealsection",
+      "sections_inicio_stagger"
+    ],
+    "8": [
+      "sections_restaurante",
+      "sections_restaurante_menu_items",
+      "sections_restaurante_restaurante",
+      "sections_restaurante_testimonials"
+    ],
+    "9": [
+      "plugins_graphify",
+      "plugins_graphify_graphifyplugin"
+    ],
+    "10": [
+      "eslint_config"
+    ],
+    "11": [
+      "vite_config"
+    ]
+  },
+  "cohesion": {
+    "0": 0.14285714285714285,
+    "1": 0.16666666666666666,
+    "2": 0.16666666666666666,
+    "3": 0.34545454545454546,
+    "4": 0.18181818181818182,
+    "5": 0.2,
+    "6": 0.2,
+    "7": 0.25,
+    "8": 0.5,
+    "9": 1.0,
+    "10": 1.0,
+    "11": 1.0
+  },
+  "gods": [
+    {
+      "id": "lib_utils_cn",
+      "label": "cn()",
+      "degree": 9
+    },
+    {
+      "id": "package_scripts",
+      "label": "scripts",
+      "degree": 5
+    },
+    {
+      "id": "ui_navigation_menu_navigationmenutrigger",
+      "label": "NavigationMenuTrigger()",
+      "degree": 3
+    },
+    {
+      "id": "src_app_app",
+      "label": "App()",
+      "degree": 2
+    },
+    {
+      "id": "ui_navigation_menu_navigationmenu",
+      "label": "NavigationMenu()",
+      "degree": 2
+    },
+    {
+      "id": "ui_navigation_menu_navigationmenulist",
+      "label": "NavigationMenuList()",
+      "degree": 2
+    },
+    {
+      "id": "ui_navigation_menu_navigationmenuitem",
+      "label": "NavigationMenuItem()",
+      "degree": 2
+    },
+    {
+      "id": "ui_navigation_menu_navigationmenutriggerstyle",
+      "label": "navigationMenuTriggerStyle",
+      "degree": 2
+    },
+    {
+      "id": "ui_navigation_menu_navigationmenucontent",
+      "label": "NavigationMenuContent()",
+      "degree": 2
+    },
+    {
+      "id": "ui_navigation_menu_navigationmenuviewport",
+      "label": "NavigationMenuViewport()",
+      "degree": 2
+    }
+  ],
+  "surprises": [
+    {
+      "source": "NavigationMenu()",
+      "target": "cn()",
+      "source_files": [
+        "src/components/ui/navigation-menu.tsx",
+        "src/lib/utils.ts"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "peripheral node `NavigationMenu()` unexpectedly reaches hub `cn()`"
+    },
+    {
+      "source": "NavigationMenuList()",
+      "target": "cn()",
+      "source_files": [
+        "src/components/ui/navigation-menu.tsx",
+        "src/lib/utils.ts"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "peripheral node `NavigationMenuList()` unexpectedly reaches hub `cn()`"
+    },
+    {
+      "source": "NavigationMenuItem()",
+      "target": "cn()",
+      "source_files": [
+        "src/components/ui/navigation-menu.tsx",
+        "src/lib/utils.ts"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "peripheral node `NavigationMenuItem()` unexpectedly reaches hub `cn()`"
+    },
+    {
+      "source": "NavigationMenuContent()",
+      "target": "cn()",
+      "source_files": [
+        "src/components/ui/navigation-menu.tsx",
+        "src/lib/utils.ts"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "peripheral node `NavigationMenuContent()` unexpectedly reaches hub `cn()`"
+    },
+    {
+      "source": "NavigationMenuViewport()",
+      "target": "cn()",
+      "source_files": [
+        "src/components/ui/navigation-menu.tsx",
+        "src/lib/utils.ts"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "peripheral node `NavigationMenuViewport()` unexpectedly reaches hub `cn()`"
+    }
+  ],
+  "tokens": {
+    "input": 0,
+    "output": 0
+  }
+}
