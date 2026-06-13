@@ -15,6 +15,7 @@ import {
   ChevronLeft,
   Star,
   X,
+  Quote,
 } from 'lucide-react';
 
 const WHATSAPP_NUMBER = '51967975109';
@@ -108,6 +109,51 @@ const ROOMS = [
   },
 ];
 
+const TESTIMONIALS = [
+  {
+    initials: 'MG',
+    name: 'María García',
+    role: 'TripAdvisor',
+    quote:
+      'Las habitaciones con vista al mar son simplemente espectaculares. Despertar con el sonido de las olas fue una experiencia inolvidable. El servicio a la habitación, impecable.',
+  },
+  {
+    initials: 'RS',
+    name: 'Roberto Silva',
+    role: 'Google Reviews',
+    quote:
+      'La suite VIP superó todas mis expectativas. La terraza con vista a la piscina es perfecta para relajarse. Definitivamente volveré en mi próximo viaje a Piura.',
+  },
+  {
+    initials: 'AF',
+    name: 'Ana & Carlos Fuentes',
+    role: 'Booking.com',
+    quote:
+      'Viajamos en familia y la habitación cuádruple fue ideal. Espacio suficiente para todos, camas muy cómodas y todo impecablemente limpio. ¡Los niños la pasaron genial!',
+  },
+  {
+    initials: 'DL',
+    name: 'Diego León',
+    role: 'TripAdvisor',
+    quote:
+      'Excelente relación calidad-precio. La habitación doble es muy acogedora, bien iluminada y con todas las comodidades necesarias. El WiFi funciona perfecto.',
+  },
+  {
+    initials: 'PM',
+    name: 'Patricia Mendoza',
+    role: 'Facebook',
+    quote:
+      'Celebramos nuestro aniversario en la Matrimonial Simple frente al mar. El balcón es el lugar perfecto para ver el atardecer. Un ambiente muy romántico y acogedor.',
+  },
+  {
+    initials: 'FR',
+    name: 'Fernando Rivas',
+    role: 'Google Reviews',
+    quote:
+      'La habitación triple fue perfecta para nuestro viaje de amigos. Muy espaciosa, cada uno con su propia cama cómoda. El personal de limpieza fue muy atento durante toda la estadía.',
+  },
+];
+
 export default function Habitaciones() {
   const [activeRoomIndex, setActiveRoomIndex] = useState(0);
   const [modalImage, setModalImage] = useState<string | null>(null);
@@ -130,6 +176,48 @@ export default function Habitaciones() {
     }
     return list.slice(0, 4);
   }, [activeRoom]);
+
+  // ── Testimonials carousel ──────────────────────────────
+  const [testimonialPage, setTestimonialPage] = useState(0);
+  const [testiVisible, setTestiVisible] = useState(1);
+
+  useEffect(() => {
+    const updateVisible = () => {
+      const w = window.innerWidth;
+      if (w >= 1024) setTestiVisible(3);
+      else if (w >= 640) setTestiVisible(2);
+      else setTestiVisible(1);
+    };
+    updateVisible();
+    window.addEventListener('resize', updateVisible);
+    return () => window.removeEventListener('resize', updateVisible);
+  }, []);
+
+  const totalTestiPages = Math.max(1, Math.ceil(TESTIMONIALS.length / testiVisible));
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTestimonialPage((prev) => (prev + 1) % totalTestiPages);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, [totalTestiPages]);
+
+  const goToTestimonialPage = (page: number) => {
+    setTestimonialPage(page);
+  };
+
+  const testiPrev = () => {
+    setTestimonialPage((prev) => (prev - 1 + totalTestiPages) % totalTestiPages);
+  };
+
+  const testiNext = () => {
+    setTestimonialPage((prev) => (prev + 1) % totalTestiPages);
+  };
+
+  // Reset page when visible count changes so we don't land out of bounds
+  useEffect(() => {
+    setTestimonialPage(0);
+  }, [testiVisible]);
 
   const handleWhatsApp = () => {
     const message = `Hola, deseo consultar disponibilidad y precios para la habitación: *${activeRoom.name} - ${activeRoom.type}*.`;
@@ -630,6 +718,216 @@ export default function Habitaciones() {
           border: 1px solid rgba(255, 255, 255, 0.22);
         }
 
+        /* ── TESTIMONIOS CAROUSEL ────────────────────────── */
+        .rooms-testi-section {
+          width: 100%;
+          background: rgba(10, 20, 40, 0.82);
+          border-top: 1px solid rgba(255, 255, 255, 0.08);
+          backdrop-filter: blur(8px);
+          padding: 52px var(--section-px, 80px) 56px;
+          font-family: sans-serif;
+        }
+
+        .rooms-testi-inner {
+          max-width: 1200px;
+          margin: 0 auto;
+        }
+
+        .rooms-testi-header {
+          text-align: center;
+          margin-bottom: 36px;
+        }
+
+        .rooms-testi-eyebrow {
+          color: #7dd3fc;
+          font-size: 11px;
+          font-weight: 700;
+          letter-spacing: 0.28em;
+          text-transform: uppercase;
+          margin: 0 0 10px;
+        }
+
+        .rooms-testi-title {
+          margin: 0;
+          color: #f8fafc;
+          font-size: clamp(1.5rem, 3.6vw, 2.3rem);
+          font-weight: 300;
+          line-height: 1.2;
+        }
+
+        .rooms-testi-title strong {
+          font-weight: 700;
+        }
+
+        .rooms-testi-carousel {
+          position: relative;
+          overflow: hidden;
+          margin: 0 auto;
+        }
+
+        .rooms-testi-track {
+          display: flex;
+          gap: 18px;
+          transition: transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+          will-change: transform;
+        }
+
+        .rooms-testi-card {
+          flex: 0 0 calc(100% - 0px);
+          min-width: 0;
+          background: rgba(15, 23, 42, 0.52);
+          border: 1px solid rgba(255, 255, 255, 0.12);
+          border-radius: 20px;
+          backdrop-filter: blur(12px);
+          padding: 28px 24px;
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+        }
+
+        .rooms-testi-stars {
+          display: flex;
+          gap: 3px;
+          color: #fbbf24;
+        }
+
+        .rooms-testi-quote {
+          margin: 0;
+          color: #cbd5e1;
+          font-size: 13.5px;
+          line-height: 1.8;
+          font-style: italic;
+          flex: 1;
+        }
+
+        .rooms-testi-author {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          margin-top: 4px;
+        }
+
+        .rooms-testi-avatar {
+          width: 44px;
+          height: 44px;
+          border-radius: 50%;
+          background: rgba(125, 211, 252, 0.18);
+          border: 1px solid rgba(125, 211, 252, 0.35);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: #7dd3fc;
+          font-weight: 700;
+          font-size: 14px;
+          flex-shrink: 0;
+        }
+
+        .rooms-testi-name {
+          margin: 0;
+          color: #f8fafc;
+          font-size: 14px;
+          font-weight: 700;
+        }
+
+        .rooms-testi-role {
+          margin: 2px 0 0;
+          color: #94a3b8;
+          font-size: 11px;
+          font-weight: 500;
+        }
+
+        .rooms-testi-quote-icon {
+          color: rgba(125, 211, 252, 0.3);
+          flex-shrink: 0;
+        }
+
+        .rooms-testi-controls {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 14px;
+          margin-top: 28px;
+        }
+
+        .rooms-testi-arrow {
+          width: 40px;
+          height: 40px;
+          border-radius: 10px;
+          border: 1px solid rgba(255, 255, 255, 0.22);
+          background: rgba(15, 23, 42, 0.45);
+          color: #e2e8f0;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          transition: all 0.25s ease;
+        }
+
+        .rooms-testi-arrow:hover {
+          background: rgba(30, 41, 59, 0.75);
+          border-color: rgba(255, 255, 255, 0.45);
+          transform: translateY(-2px);
+        }
+
+        .rooms-testi-dots {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+        }
+
+        .rooms-testi-dot {
+          width: 9px;
+          height: 9px;
+          border-radius: 50%;
+          border: none;
+          background: rgba(148, 163, 184, 0.45);
+          cursor: pointer;
+          padding: 0;
+          transition: all 0.3s ease;
+        }
+
+        .rooms-testi-dot.active {
+          background: #7dd3fc;
+          box-shadow: 0 0 10px rgba(125, 211, 252, 0.5);
+          width: 24px;
+          border-radius: 999px;
+        }
+
+        /* ── Testimonials responsive ──────────────────── */
+        @media (min-width: 640px) {
+          .rooms-testi-card {
+            flex: 0 0 calc(50% - 9px);
+          }
+
+          .rooms-testi-section {
+            padding: 64px var(--section-px, 40px) 64px;
+          }
+        }
+
+        @media (min-width: 1024px) {
+          .rooms-testi-card {
+            flex: 0 0 calc(33.333% - 12px);
+          }
+
+          .rooms-testi-section {
+            padding: 80px var(--section-px, 80px) 80px;
+          }
+        }
+
+        @media (max-width: 639px) {
+          .rooms-testi-section {
+            padding: 40px var(--section-px, 20px) 40px;
+          }
+
+          .rooms-testi-card {
+            padding: 24px 20px;
+          }
+
+          .rooms-testi-quote {
+            font-size: 13px;
+          }
+        }
+
         @media (max-width: 1250px) {
           .rooms-grid {
             grid-template-columns: 300px 1fr;
@@ -919,6 +1217,86 @@ export default function Habitaciones() {
             </motion.div>
           )}
         </AnimatePresence>
+      </section>
+
+      {/* ── TESTIMONIOS CAROUSEL ────────────────────────── */}
+      <section className="rooms-testi-section">
+        <div className="rooms-testi-inner">
+          <motion.div
+            className="rooms-testi-header"
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            <p className="rooms-testi-eyebrow">Experiencias de nuestros huéspedes</p>
+            <h2 className="rooms-testi-title">
+              Lo que dicen de <strong>nuestras habitaciones</strong>
+            </h2>
+          </motion.div>
+
+          <div className="rooms-testi-carousel">
+            <motion.div
+              className="rooms-testi-track"
+              animate={{
+                transform: `translateX(calc(-${testimonialPage * 100}% - ${testimonialPage * 18}px))`,
+              }}
+              transition={{ duration: 0.45, ease: [0.25, 0.46, 0.45, 0.94] }}
+              style={{
+                transform: `translateX(calc(-${testimonialPage * 100}% - ${testimonialPage * 18}px))`,
+              }}
+            >
+              {TESTIMONIALS.map((t, i) => (
+                <motion.div
+                  key={i}
+                  className="rooms-testi-card"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: i * 0.08 }}
+                >
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                    <Quote size={22} className="rooms-testi-quote-icon" />
+                    <div className="rooms-testi-stars">
+                      {[1, 2, 3, 4, 5].map((s) => (
+                        <Star key={s} size={14} fill="currentColor" />
+                      ))}
+                    </div>
+                  </div>
+                  <p className="rooms-testi-quote">{t.quote}</p>
+                  <div className="rooms-testi-author">
+                    <div className="rooms-testi-avatar">{t.initials}</div>
+                    <div>
+                      <p className="rooms-testi-name">{t.name}</p>
+                      <p className="rooms-testi-role">{t.role}</p>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </motion.div>
+          </div>
+
+          <div className="rooms-testi-controls">
+            <button className="rooms-testi-arrow" onClick={testiPrev} aria-label="Testimonio anterior">
+              <ChevronLeft size={16} />
+            </button>
+
+            <div className="rooms-testi-dots">
+              {Array.from({ length: totalTestiPages }, (_, i) => (
+                <button
+                  key={i}
+                  className={`rooms-testi-dot${i === testimonialPage ? ' active' : ''}`}
+                  onClick={() => goToTestimonialPage(i)}
+                  aria-label={`Ir a página de testimonios ${i + 1}`}
+                />
+              ))}
+            </div>
+
+            <button className="rooms-testi-arrow" onClick={testiNext} aria-label="Siguiente testimonio">
+              <ChevronRight size={16} />
+            </button>
+          </div>
+        </div>
       </section>
     </>
   );
