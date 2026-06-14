@@ -721,9 +721,8 @@ export default function Habitaciones() {
         /* ── TESTIMONIOS CAROUSEL ────────────────────────── */
         .rooms-testi-section {
           width: 100%;
-          background: rgba(10, 20, 40, 0.82);
+          background: #0a1428;
           border-top: 1px solid rgba(255, 255, 255, 0.08);
-          backdrop-filter: blur(8px);
           padding: 52px var(--section-px, 80px) 56px;
           font-family: sans-serif;
         }

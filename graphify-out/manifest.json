@@ -1,8 +1,8 @@
 {
   ".opencode/opencode.json": {
-    "mtime": 1781310237.8654675,
-    "ast_hash": "abcc8b9dcd80bca5f9dde6d9f0c3ae79",
-    "semantic_hash": "abcc8b9dcd80bca5f9dde6d9f0c3ae79"
+    "mtime": 1781313509.8251548,
+    "ast_hash": "e5f74d14a81702b55bdf53b33ec991d7",
+    "semantic_hash": "e5f74d14a81702b55bdf53b33ec991d7"
   },
   ".opencode/plugins/graphify.js": {
     "mtime": 1781310419.787565,
@@ -20,47 +20,47 @@
     "semantic_hash": "e31a2998265cf2226c0a7a74ccd7c92d"
   },
   "src/App.jsx": {
-    "mtime": 1780006741.3780584,
+    "mtime": 1781414878.9779508,
     "ast_hash": "00227b35ed7a53d37148c82dd139d199",
     "semantic_hash": "00227b35ed7a53d37148c82dd139d199"
   },
   "src/components/layout/Footer.tsx": {
-    "mtime": 1780006692.3294451,
-    "ast_hash": "6dc100afb8955362b6ade5750bf321b3",
-    "semantic_hash": "6dc100afb8955362b6ade5750bf321b3"
+    "mtime": 1781415625.218496,
+    "ast_hash": "882585907a5603300527423d12bab9cf",
+    "semantic_hash": "882585907a5603300527423d12bab9cf"
   },
   "src/components/layout/Navbar.tsx": {
-    "mtime": 1780006423.4565172,
+    "mtime": 1781414878.9578564,
     "ast_hash": "65508496700ff6cacc1231217ae95a69",
     "semantic_hash": "65508496700ff6cacc1231217ae95a69"
   },
   "src/components/sections/Catering.tsx": {
-    "mtime": 1780525472.4562995,
+    "mtime": 1781414879.0458865,
     "ast_hash": "ec3834624a53abbb6b674ddeffb80183",
     "semantic_hash": "ec3834624a53abbb6b674ddeffb80183"
   },
   "src/components/sections/Habitaciones.tsx": {
-    "mtime": 1780006678.706689,
-    "ast_hash": "da3879dc5354fa8ec9f49165dd372fb8",
-    "semantic_hash": "da3879dc5354fa8ec9f49165dd372fb8"
+    "mtime": 1781415447.1381543,
+    "ast_hash": "9469949ede3a3ff2b711acb4086f9b57",
+    "semantic_hash": "9469949ede3a3ff2b711acb4086f9b57"
   },
   "src/components/sections/Hero.tsx": {
-    "mtime": 1780524083.5902913,
+    "mtime": 1781414879.013201,
     "ast_hash": "1f823d52f1248e27a889bb605c52c78e",
     "semantic_hash": "1f823d52f1248e27a889bb605c52c78e"
   },
   "src/components/sections/Inicio.tsx": {
-    "mtime": 1780521899.6013436,
+    "mtime": 1781414879.0292368,
     "ast_hash": "f7e20eb1a97f74c39fbb3e8434eeb78a",
     "semantic_hash": "f7e20eb1a97f74c39fbb3e8434eeb78a"
   },
   "src/components/sections/LunaBarShowcase.tsx": {
-    "mtime": 1780524172.078904,
+    "mtime": 1781414879.0619047,
     "ast_hash": "15c208f6a3cc9c50b0d1a4494ecad8b4",
     "semantic_hash": "15c208f6a3cc9c50b0d1a4494ecad8b4"
   },
   "src/components/sections/Restaurante.tsx": {
-    "mtime": 1780527542.645579,
+    "mtime": 1781414879.079941,
     "ast_hash": "91de73706aefb014b833139162494cd7",
     "semantic_hash": "91de73706aefb014b833139162494cd7"
   },
@@ -83,5 +83,10 @@
     "mtime": 1779918458.4335215,
     "ast_hash": "3b70a0b92236b6884dda15346af7cb25",
     "semantic_hash": "3b70a0b92236b6884dda15346af7cb25"
+  },
+  ".opencode/package.json": {
+    "mtime": 1781313516.9113448,
+    "ast_hash": "d0b068006602e0626e3362ba1a788a00",
+    "semantic_hash": "d0b068006602e0626e3362ba1a788a00"
   }
 }

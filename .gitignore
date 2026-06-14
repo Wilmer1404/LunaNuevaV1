@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Tooling outputs and caches
+graphify-out/
+.opencode/
+.graphifyignore

@@ -4,14 +4,74 @@
   "graph": {},
   "nodes": [
     {
+      "label": "opencode.json",
+      "file_type": "code",
+      "source_file": ".opencode/opencode.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "opencode_opencode",
+      "community": 9,
+      "norm_label": "opencode.json"
+    },
+    {
+      "label": "$schema",
+      "file_type": "code",
+      "source_file": ".opencode/opencode.json",
+      "source_location": "L2",
+      "_origin": "ast",
+      "id": "opencode_opencode_schema",
+      "community": 9,
+      "norm_label": "$schema"
+    },
+    {
+      "label": "plugin",
+      "file_type": "code",
+      "source_file": ".opencode/opencode.json",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "opencode_opencode_plugin",
+      "community": 9,
+      "norm_label": "plugin"
+    },
+    {
+      "label": "package.json",
+      "file_type": "code",
+      "source_file": ".opencode/package.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "opencode_package",
+      "community": 10,
+      "norm_label": "package.json"
+    },
+    {
+      "label": "dependencies",
+      "file_type": "code",
+      "source_file": ".opencode/package.json",
+      "source_location": "L2",
+      "_origin": "ast",
+      "id": "opencode_package_dependencies",
+      "community": 10,
+      "norm_label": "dependencies"
+    },
+    {
+      "label": "@opencode-ai/plugin",
+      "file_type": "code",
+      "source_file": ".opencode/package.json",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "opencode_package_dependencies_opencode_ai_plugin",
+      "community": 10,
+      "norm_label": "@opencode-ai/plugin"
+    },
+    {
       "label": "graphify.js",
       "file_type": "code",
       "source_file": ".opencode/plugins/graphify.js",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 9,
-      "norm_label": "graphify.js",
-      "id": "plugins_graphify"
+      "id": "plugins_graphify",
+      "community": 11,
+      "norm_label": "graphify.js"
     },
     {
       "label": "GraphifyPlugin()",
@@ -19,9 +79,9 @@
       "source_file": ".opencode/plugins/graphify.js",
       "source_location": "L6",
       "_origin": "ast",
-      "community": 9,
-      "norm_label": "graphifyplugin()",
-      "id": "plugins_graphify_graphifyplugin"
+      "id": "plugins_graphify_graphifyplugin",
+      "community": 11,
+      "norm_label": "graphifyplugin()"
     },
     {
       "label": "eslint.config.js",
@@ -29,9 +89,9 @@
       "source_file": "eslint.config.js",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 10,
-      "norm_label": "eslint.config.js",
-      "id": "eslint_config"
+      "id": "eslint_config",
+      "community": 12,
+      "norm_label": "eslint.config.js"
     },
     {
       "label": "package.json",
@@ -39,9 +99,9 @@
       "source_file": "package.json",
       "source_location": "L1",
       "_origin": "ast",
+      "id": "package",
       "community": 6,
-      "norm_label": "package.json",
-      "id": "package"
+      "norm_label": "package.json"
     },
     {
       "label": "name",
@@ -49,9 +109,9 @@
       "source_file": "package.json",
       "source_location": "L2",
       "_origin": "ast",
+      "id": "package_name",
       "community": 6,
-      "norm_label": "name",
-      "id": "package_name"
+      "norm_label": "name"
     },
     {
       "label": "private",
@@ -59,9 +119,9 @@
       "source_file": "package.json",
       "source_location": "L3",
       "_origin": "ast",
+      "id": "package_private",
       "community": 6,
-      "norm_label": "private",
-      "id": "package_private"
+      "norm_label": "private"
     },
     {
       "label": "version",
@@ -69,9 +129,9 @@
       "source_file": "package.json",
       "source_location": "L4",
       "_origin": "ast",
+      "id": "package_version",
       "community": 6,
-      "norm_label": "version",
-      "id": "package_version"
+      "norm_label": "version"
     },
     {
       "label": "type",
@@ -79,9 +139,9 @@
       "source_file": "package.json",
       "source_location": "L5",
       "_origin": "ast",
+      "id": "package_type",
       "community": 6,
-      "norm_label": "type",
-      "id": "package_type"
+      "norm_label": "type"
     },
     {
       "label": "scripts",
@@ -89,9 +149,9 @@
       "source_file": "package.json",
       "source_location": "L6",
       "_origin": "ast",
+      "id": "package_scripts",
       "community": 6,
-      "norm_label": "scripts",
-      "id": "package_scripts"
+      "norm_label": "scripts"
     },
     {
       "label": "dev",
@@ -99,9 +159,9 @@
       "source_file": "package.json",
       "source_location": "L7",
       "_origin": "ast",
+      "id": "package_scripts_dev",
       "community": 6,
-      "norm_label": "dev",
-      "id": "package_scripts_dev"
+      "norm_label": "dev"
     },
     {
       "label": "build",
@@ -109,9 +169,9 @@
       "source_file": "package.json",
       "source_location": "L8",
       "_origin": "ast",
+      "id": "package_scripts_build",
       "community": 6,
-      "norm_label": "build",
-      "id": "package_scripts_build"
+      "norm_label": "build"
     },
     {
       "label": "lint",
@@ -119,9 +179,9 @@
       "source_file": "package.json",
       "source_location": "L9",
       "_origin": "ast",
+      "id": "package_scripts_lint",
       "community": 6,
-      "norm_label": "lint",
-      "id": "package_scripts_lint"
+      "norm_label": "lint"
     },
     {
       "label": "preview",
@@ -129,9 +189,9 @@
       "source_file": "package.json",
       "source_location": "L10",
       "_origin": "ast",
+      "id": "package_scripts_preview",
       "community": 6,
-      "norm_label": "preview",
-      "id": "package_scripts_preview"
+      "norm_label": "preview"
     },
     {
       "label": "dependencies",
@@ -139,9 +199,9 @@
       "source_file": "package.json",
       "source_location": "L12",
       "_origin": "ast",
+      "id": "package_dependencies",
       "community": 1,
-      "norm_label": "dependencies",
-      "id": "package_dependencies"
+      "norm_label": "dependencies"
     },
     {
       "label": "@radix-ui/react-navigation-menu",
@@ -149,9 +209,9 @@
       "source_file": "package.json",
       "source_location": "L13",
       "_origin": "ast",
+      "id": "package_dependencies_radix_ui_react_navigation_menu",
       "community": 1,
-      "norm_label": "@radix-ui/react-navigation-menu",
-      "id": "package_dependencies_radix_ui_react_navigation_menu"
+      "norm_label": "@radix-ui/react-navigation-menu"
     },
     {
       "label": "@react-three/fiber",
@@ -159,9 +219,9 @@
       "source_file": "package.json",
       "source_location": "L14",
       "_origin": "ast",
+      "id": "package_dependencies_react_three_fiber",
       "community": 1,
-      "norm_label": "@react-three/fiber",
-      "id": "package_dependencies_react_three_fiber"
+      "norm_label": "@react-three/fiber"
     },
     {
       "label": "class-variance-authority",
@@ -169,9 +229,9 @@
       "source_file": "package.json",
       "source_location": "L15",
       "_origin": "ast",
+      "id": "package_dependencies_class_variance_authority",
       "community": 1,
-      "norm_label": "class-variance-authority",
-      "id": "package_dependencies_class_variance_authority"
+      "norm_label": "class-variance-authority"
     },
     {
       "label": "clsx",
@@ -179,9 +239,9 @@
       "source_file": "package.json",
       "source_location": "L16",
       "_origin": "ast",
+      "id": "package_dependencies_clsx",
       "community": 1,
-      "norm_label": "clsx",
-      "id": "package_dependencies_clsx"
+      "norm_label": "clsx"
     },
     {
       "label": "framer-motion",
@@ -189,9 +249,9 @@
       "source_file": "package.json",
       "source_location": "L17",
       "_origin": "ast",
+      "id": "package_dependencies_framer_motion",
       "community": 1,
-      "norm_label": "framer-motion",
-      "id": "package_dependencies_framer_motion"
+      "norm_label": "framer-motion"
     },
     {
       "label": "gsap",
@@ -199,9 +259,9 @@
       "source_file": "package.json",
       "source_location": "L18",
       "_origin": "ast",
+      "id": "package_dependencies_gsap",
       "community": 1,
-      "norm_label": "gsap",
-      "id": "package_dependencies_gsap"
+      "norm_label": "gsap"
     },
     {
       "label": "lucide-react",
@@ -209,9 +269,9 @@
       "source_file": "package.json",
       "source_location": "L19",
       "_origin": "ast",
+      "id": "package_dependencies_lucide_react",
       "community": 1,
-      "norm_label": "lucide-react",
-      "id": "package_dependencies_lucide_react"
+      "norm_label": "lucide-react"
     },
     {
       "label": "react",
@@ -219,9 +279,9 @@
       "source_file": "package.json",
       "source_location": "L20",
       "_origin": "ast",
+      "id": "package_dependencies_react",
       "community": 1,
-      "norm_label": "react",
-      "id": "package_dependencies_react"
+      "norm_label": "react"
     },
     {
       "label": "react-dom",
@@ -229,9 +289,9 @@
       "source_file": "package.json",
       "source_location": "L21",
       "_origin": "ast",
+      "id": "package_dependencies_react_dom",
       "community": 1,
-      "norm_label": "react-dom",
-      "id": "package_dependencies_react_dom"
+      "norm_label": "react-dom"
     },
     {
       "label": "tailwind-merge",
@@ -239,9 +299,9 @@
       "source_file": "package.json",
       "source_location": "L22",
       "_origin": "ast",
+      "id": "package_dependencies_tailwind_merge",
       "community": 1,
-      "norm_label": "tailwind-merge",
-      "id": "package_dependencies_tailwind_merge"
+      "norm_label": "tailwind-merge"
     },
     {
       "label": "three",
@@ -249,9 +309,9 @@
       "source_file": "package.json",
       "source_location": "L23",
       "_origin": "ast",
+      "id": "package_dependencies_three",
       "community": 1,
-      "norm_label": "three",
-      "id": "package_dependencies_three"
+      "norm_label": "three"
     },
     {
       "label": "devDependencies",
@@ -259,9 +319,9 @@
       "source_file": "package.json",
       "source_location": "L25",
       "_origin": "ast",
+      "id": "package_devdependencies",
       "community": 2,
-      "norm_label": "devdependencies",
-      "id": "package_devdependencies"
+      "norm_label": "devdependencies"
     },
     {
       "label": "@eslint/js",
@@ -269,9 +329,9 @@
       "source_file": "package.json",
       "source_location": "L26",
       "_origin": "ast",
+      "id": "package_devdependencies_eslint_js",
       "community": 2,
-      "norm_label": "@eslint/js",
-      "id": "package_devdependencies_eslint_js"
+      "norm_label": "@eslint/js"
     },
     {
       "label": "@tailwindcss/vite",
@@ -279,9 +339,9 @@
       "source_file": "package.json",
       "source_location": "L27",
       "_origin": "ast",
+      "id": "package_devdependencies_tailwindcss_vite",
       "community": 2,
-      "norm_label": "@tailwindcss/vite",
-      "id": "package_devdependencies_tailwindcss_vite"
+      "norm_label": "@tailwindcss/vite"
     },
     {
       "label": "@types/react",
@@ -289,9 +349,9 @@
       "source_file": "package.json",
       "source_location": "L28",
       "_origin": "ast",
+      "id": "package_devdependencies_types_react",
       "community": 2,
-      "norm_label": "@types/react",
-      "id": "package_devdependencies_types_react"
+      "norm_label": "@types/react"
     },
     {
       "label": "@types/react-dom",
@@ -299,9 +359,9 @@
       "source_file": "package.json",
       "source_location": "L29",
       "_origin": "ast",
+      "id": "package_devdependencies_types_react_dom",
       "community": 2,
-      "norm_label": "@types/react-dom",
-      "id": "package_devdependencies_types_react_dom"
+      "norm_label": "@types/react-dom"
     },
     {
       "label": "@vitejs/plugin-react",
@@ -309,9 +369,9 @@
       "source_file": "package.json",
       "source_location": "L30",
       "_origin": "ast",
+      "id": "package_devdependencies_vitejs_plugin_react",
       "community": 2,
-      "norm_label": "@vitejs/plugin-react",
-      "id": "package_devdependencies_vitejs_plugin_react"
+      "norm_label": "@vitejs/plugin-react"
     },
     {
       "label": "eslint",
@@ -319,9 +379,9 @@
       "source_file": "package.json",
       "source_location": "L31",
       "_origin": "ast",
+      "id": "package_devdependencies_eslint",
       "community": 2,
-      "norm_label": "eslint",
-      "id": "package_devdependencies_eslint"
+      "norm_label": "eslint"
     },
     {
       "label": "eslint-plugin-react-hooks",
@@ -329,9 +389,9 @@
       "source_file": "package.json",
       "source_location": "L32",
       "_origin": "ast",
+      "id": "package_devdependencies_eslint_plugin_react_hooks",
       "community": 2,
-      "norm_label": "eslint-plugin-react-hooks",
-      "id": "package_devdependencies_eslint_plugin_react_hooks"
+      "norm_label": "eslint-plugin-react-hooks"
     },
     {
       "label": "eslint-plugin-react-refresh",
@@ -339,9 +399,9 @@
       "source_file": "package.json",
       "source_location": "L33",
       "_origin": "ast",
+      "id": "package_devdependencies_eslint_plugin_react_refresh",
       "community": 2,
-      "norm_label": "eslint-plugin-react-refresh",
-      "id": "package_devdependencies_eslint_plugin_react_refresh"
+      "norm_label": "eslint-plugin-react-refresh"
     },
     {
       "label": "globals",
@@ -349,9 +409,9 @@
       "source_file": "package.json",
       "source_location": "L34",
       "_origin": "ast",
+      "id": "package_devdependencies_globals",
       "community": 2,
-      "norm_label": "globals",
-      "id": "package_devdependencies_globals"
+      "norm_label": "globals"
     },
     {
       "label": "tailwindcss",
@@ -359,9 +419,9 @@
       "source_file": "package.json",
       "source_location": "L35",
       "_origin": "ast",
+      "id": "package_devdependencies_tailwindcss",
       "community": 2,
-      "norm_label": "tailwindcss",
-      "id": "package_devdependencies_tailwindcss"
+      "norm_label": "tailwindcss"
     },
     {
       "label": "vite",
@@ -369,9 +429,9 @@
       "source_file": "package.json",
       "source_location": "L36",
       "_origin": "ast",
+      "id": "package_devdependencies_vite",
       "community": 2,
-      "norm_label": "vite",
-      "id": "package_devdependencies_vite"
+      "norm_label": "vite"
     },
     {
       "label": "App.jsx",
@@ -379,9 +439,9 @@
       "source_file": "src/App.jsx",
       "source_location": "L1",
       "_origin": "ast",
+      "id": "src_app",
       "community": 0,
-      "norm_label": "app.jsx",
-      "id": "src_app"
+      "norm_label": "app.jsx"
     },
     {
       "label": "PT",
@@ -389,9 +449,9 @@
       "source_file": "src/App.jsx",
       "source_location": "L11",
       "_origin": "ast",
+      "id": "src_app_pt",
       "community": 0,
-      "norm_label": "pt",
-      "id": "src_app_pt"
+      "norm_label": "pt"
     },
     {
       "label": "App()",
@@ -399,9 +459,9 @@
       "source_file": "src/App.jsx",
       "source_location": "L13",
       "_origin": "ast",
+      "id": "src_app_app",
       "community": 0,
-      "norm_label": "app()",
-      "id": "src_app_app"
+      "norm_label": "app()"
     },
     {
       "label": "Footer.tsx",
@@ -409,9 +469,9 @@
       "source_file": "src/components/layout/Footer.tsx",
       "source_location": "L1",
       "_origin": "ast",
+      "id": "layout_footer",
       "community": 5,
-      "norm_label": "footer.tsx",
-      "id": "layout_footer"
+      "norm_label": "footer.tsx"
     },
     {
       "label": "InstagramIcon()",
@@ -419,9 +479,9 @@
       "source_file": "src/components/layout/Footer.tsx",
       "source_location": "L5",
       "_origin": "ast",
+      "id": "layout_footer_instagramicon",
       "community": 5,
-      "norm_label": "instagramicon()",
-      "id": "layout_footer_instagramicon"
+      "norm_label": "instagramicon()"
     },
     {
       "label": "FacebookIcon()",
@@ -429,9 +489,9 @@
       "source_file": "src/components/layout/Footer.tsx",
       "source_location": "L13",
       "_origin": "ast",
+      "id": "layout_footer_facebookicon",
       "community": 5,
-      "norm_label": "facebookicon()",
-      "id": "layout_footer_facebookicon"
+      "norm_label": "facebookicon()"
     },
     {
       "label": "TikTokIcon()",
@@ -439,9 +499,9 @@
       "source_file": "src/components/layout/Footer.tsx",
       "source_location": "L19",
       "_origin": "ast",
+      "id": "layout_footer_tiktokicon",
       "community": 5,
-      "norm_label": "tiktokicon()",
-      "id": "layout_footer_tiktokicon"
+      "norm_label": "tiktokicon()"
     },
     {
       "label": "BookingIcon()",
@@ -449,9 +509,9 @@
       "source_file": "src/components/layout/Footer.tsx",
       "source_location": "L25",
       "_origin": "ast",
+      "id": "layout_footer_bookingicon",
       "community": 5,
-      "norm_label": "bookingicon()",
-      "id": "layout_footer_bookingicon"
+      "norm_label": "bookingicon()"
     },
     {
       "label": "TrivagoIcon()",
@@ -459,9 +519,9 @@
       "source_file": "src/components/layout/Footer.tsx",
       "source_location": "L31",
       "_origin": "ast",
+      "id": "layout_footer_trivagoicon",
       "community": 5,
-      "norm_label": "trivagoicon()",
-      "id": "layout_footer_trivagoicon"
+      "norm_label": "trivagoicon()"
     },
     {
       "label": "SOCIAL_LINKS",
@@ -469,9 +529,9 @@
       "source_file": "src/components/layout/Footer.tsx",
       "source_location": "L37",
       "_origin": "ast",
+      "id": "layout_footer_social_links",
       "community": 5,
-      "norm_label": "social_links",
-      "id": "layout_footer_social_links"
+      "norm_label": "social_links"
     },
     {
       "label": "NAV_COL",
@@ -479,9 +539,9 @@
       "source_file": "src/components/layout/Footer.tsx",
       "source_location": "L46",
       "_origin": "ast",
+      "id": "layout_footer_nav_col",
       "community": 5,
-      "norm_label": "nav_col",
-      "id": "layout_footer_nav_col"
+      "norm_label": "nav_col"
     },
     {
       "label": "HORARIO",
@@ -489,9 +549,9 @@
       "source_file": "src/components/layout/Footer.tsx",
       "source_location": "L50",
       "_origin": "ast",
+      "id": "layout_footer_horario",
       "community": 5,
-      "norm_label": "horario",
-      "id": "layout_footer_horario"
+      "norm_label": "horario"
     },
     {
       "label": "Footer()",
@@ -499,9 +559,9 @@
       "source_file": "src/components/layout/Footer.tsx",
       "source_location": "L56",
       "_origin": "ast",
+      "id": "layout_footer_footer",
       "community": 5,
-      "norm_label": "footer()",
-      "id": "layout_footer_footer"
+      "norm_label": "footer()"
     },
     {
       "label": "Navbar.tsx",
@@ -509,9 +569,9 @@
       "source_file": "src/components/layout/Navbar.tsx",
       "source_location": "L1",
       "_origin": "ast",
+      "id": "layout_navbar",
       "community": 0,
-      "norm_label": "navbar.tsx",
-      "id": "layout_navbar"
+      "norm_label": "navbar.tsx"
     },
     {
       "label": "NAV_LINKS",
@@ -519,9 +579,9 @@
       "source_file": "src/components/layout/Navbar.tsx",
       "source_location": "L13",
       "_origin": "ast",
+      "id": "layout_navbar_nav_links",
       "community": 0,
-      "norm_label": "nav_links",
-      "id": "layout_navbar_nav_links"
+      "norm_label": "nav_links"
     },
     {
       "label": "NavbarProps",
@@ -529,9 +589,9 @@
       "source_file": "src/components/layout/Navbar.tsx",
       "source_location": "L30",
       "_origin": "ast",
+      "id": "layout_navbar_navbarprops",
       "community": 0,
-      "norm_label": "navbarprops",
-      "id": "layout_navbar_navbarprops"
+      "norm_label": "navbarprops"
     },
     {
       "label": "Navbar()",
@@ -539,9 +599,9 @@
       "source_file": "src/components/layout/Navbar.tsx",
       "source_location": "L35",
       "_origin": "ast",
+      "id": "layout_navbar_navbar",
       "community": 0,
-      "norm_label": "navbar()",
-      "id": "layout_navbar_navbar"
+      "norm_label": "navbar()"
     },
     {
       "label": "Catering.tsx",
@@ -549,9 +609,9 @@
       "source_file": "src/components/sections/Catering.tsx",
       "source_location": "L1",
       "_origin": "ast",
+      "id": "sections_catering",
       "community": 0,
-      "norm_label": "catering.tsx",
-      "id": "sections_catering"
+      "norm_label": "catering.tsx"
     },
     {
       "label": "Catering()",
@@ -559,9 +619,9 @@
       "source_file": "src/components/sections/Catering.tsx",
       "source_location": "L4",
       "_origin": "ast",
+      "id": "sections_catering_catering",
       "community": 0,
-      "norm_label": "catering()",
-      "id": "sections_catering_catering"
+      "norm_label": "catering()"
     },
     {
       "label": "Habitaciones.tsx",
@@ -569,29 +629,49 @@
       "source_file": "src/components/sections/Habitaciones.tsx",
       "source_location": "L1",
       "_origin": "ast",
+      "id": "sections_habitaciones",
       "community": 0,
-      "norm_label": "habitaciones.tsx",
-      "id": "sections_habitaciones"
+      "norm_label": "habitaciones.tsx"
+    },
+    {
+      "label": "ROOM_ACCENTS",
+      "file_type": "code",
+      "source_file": "src/components/sections/Habitaciones.tsx",
+      "source_location": "L23",
+      "_origin": "ast",
+      "id": "sections_habitaciones_room_accents",
+      "community": 0,
+      "norm_label": "room_accents"
     },
     {
       "label": "ROOMS",
       "file_type": "code",
       "source_file": "src/components/sections/Habitaciones.tsx",
-      "source_location": "L7",
+      "source_location": "L25",
       "_origin": "ast",
+      "id": "sections_habitaciones_rooms",
       "community": 0,
-      "norm_label": "rooms",
-      "id": "sections_habitaciones_rooms"
+      "norm_label": "rooms"
+    },
+    {
+      "label": "TESTIMONIALS",
+      "file_type": "code",
+      "source_file": "src/components/sections/Habitaciones.tsx",
+      "source_location": "L112",
+      "_origin": "ast",
+      "id": "sections_habitaciones_testimonials",
+      "community": 0,
+      "norm_label": "testimonials"
     },
     {
       "label": "Habitaciones()",
       "file_type": "code",
       "source_file": "src/components/sections/Habitaciones.tsx",
-      "source_location": "L90",
+      "source_location": "L157",
       "_origin": "ast",
+      "id": "sections_habitaciones_habitaciones",
       "community": 0,
-      "norm_label": "habitaciones()",
-      "id": "sections_habitaciones_habitaciones"
+      "norm_label": "habitaciones()"
     },
     {
       "label": "Hero.tsx",
@@ -599,9 +679,9 @@
       "source_file": "src/components/sections/Hero.tsx",
       "source_location": "L1",
       "_origin": "ast",
+      "id": "sections_hero",
       "community": 0,
-      "norm_label": "hero.tsx",
-      "id": "sections_hero"
+      "norm_label": "hero.tsx"
     },
     {
       "label": "Hero()",
@@ -609,9 +689,9 @@
       "source_file": "src/components/sections/Hero.tsx",
       "source_location": "L3",
       "_origin": "ast",
+      "id": "sections_hero_hero",
       "community": 0,
-      "norm_label": "hero()",
-      "id": "sections_hero_hero"
+      "norm_label": "hero()"
     },
     {
       "label": "Inicio.tsx",
@@ -619,9 +699,9 @@
       "source_file": "src/components/sections/Inicio.tsx",
       "source_location": "L1",
       "_origin": "ast",
+      "id": "sections_inicio",
       "community": 7,
-      "norm_label": "inicio.tsx",
-      "id": "sections_inicio"
+      "norm_label": "inicio.tsx"
     },
     {
       "label": "fadeUp",
@@ -629,9 +709,9 @@
       "source_file": "src/components/sections/Inicio.tsx",
       "source_location": "L5",
       "_origin": "ast",
+      "id": "sections_inicio_fadeup",
       "community": 7,
-      "norm_label": "fadeup",
-      "id": "sections_inicio_fadeup"
+      "norm_label": "fadeup"
     },
     {
       "label": "stagger",
@@ -639,9 +719,9 @@
       "source_file": "src/components/sections/Inicio.tsx",
       "source_location": "L10",
       "_origin": "ast",
+      "id": "sections_inicio_stagger",
       "community": 7,
-      "norm_label": "stagger",
-      "id": "sections_inicio_stagger"
+      "norm_label": "stagger"
     },
     {
       "label": "RevealSection()",
@@ -649,9 +729,9 @@
       "source_file": "src/components/sections/Inicio.tsx",
       "source_location": "L15",
       "_origin": "ast",
+      "id": "sections_inicio_revealsection",
       "community": 7,
-      "norm_label": "revealsection()",
-      "id": "sections_inicio_revealsection"
+      "norm_label": "revealsection()"
     },
     {
       "label": "EXPERIENCES",
@@ -659,9 +739,9 @@
       "source_file": "src/components/sections/Inicio.tsx",
       "source_location": "L25",
       "_origin": "ast",
+      "id": "sections_inicio_experiences",
       "community": 7,
-      "norm_label": "experiences",
-      "id": "sections_inicio_experiences"
+      "norm_label": "experiences"
     },
     {
       "label": "AMENITIES",
@@ -669,9 +749,9 @@
       "source_file": "src/components/sections/Inicio.tsx",
       "source_location": "L32",
       "_origin": "ast",
+      "id": "sections_inicio_amenities",
       "community": 7,
-      "norm_label": "amenities",
-      "id": "sections_inicio_amenities"
+      "norm_label": "amenities"
     },
     {
       "label": "InicioProps",
@@ -679,9 +759,9 @@
       "source_file": "src/components/sections/Inicio.tsx",
       "source_location": "L39",
       "_origin": "ast",
+      "id": "sections_inicio_inicioprops",
       "community": 7,
-      "norm_label": "inicioprops",
-      "id": "sections_inicio_inicioprops"
+      "norm_label": "inicioprops"
     },
     {
       "label": "Inicio()",
@@ -689,9 +769,9 @@
       "source_file": "src/components/sections/Inicio.tsx",
       "source_location": "L43",
       "_origin": "ast",
+      "id": "sections_inicio_inicio",
       "community": 7,
-      "norm_label": "inicio()",
-      "id": "sections_inicio_inicio"
+      "norm_label": "inicio()"
     },
     {
       "label": "LunaBarShowcase.tsx",
@@ -699,9 +779,9 @@
       "source_file": "src/components/sections/LunaBarShowcase.tsx",
       "source_location": "L1",
       "_origin": "ast",
+      "id": "sections_lunabarshowcase",
       "community": 4,
-      "norm_label": "lunabarshowcase.tsx",
-      "id": "sections_lunabarshowcase"
+      "norm_label": "lunabarshowcase.tsx"
     },
     {
       "label": "ProductId",
@@ -709,9 +789,9 @@
       "source_file": "src/components/sections/LunaBarShowcase.tsx",
       "source_location": "L15",
       "_origin": "ast",
+      "id": "sections_lunabarshowcase_productid",
       "community": 4,
-      "norm_label": "productid",
-      "id": "sections_lunabarshowcase_productid"
+      "norm_label": "productid"
     },
     {
       "label": "FeatureMetric",
@@ -719,9 +799,9 @@
       "source_file": "src/components/sections/LunaBarShowcase.tsx",
       "source_location": "L17",
       "_origin": "ast",
+      "id": "sections_lunabarshowcase_featuremetric",
       "community": 4,
-      "norm_label": "featuremetric",
-      "id": "sections_lunabarshowcase_featuremetric"
+      "norm_label": "featuremetric"
     },
     {
       "label": "ProductData",
@@ -729,9 +809,9 @@
       "source_file": "src/components/sections/LunaBarShowcase.tsx",
       "source_location": "L23",
       "_origin": "ast",
+      "id": "sections_lunabarshowcase_productdata",
       "community": 4,
-      "norm_label": "productdata",
-      "id": "sections_lunabarshowcase_productdata"
+      "norm_label": "productdata"
     },
     {
       "label": "PRODUCT_DATA",
@@ -739,9 +819,9 @@
       "source_file": "src/components/sections/LunaBarShowcase.tsx",
       "source_location": "L41",
       "_origin": "ast",
+      "id": "sections_lunabarshowcase_product_data",
       "community": 4,
-      "norm_label": "product_data",
-      "id": "sections_lunabarshowcase_product_data"
+      "norm_label": "product_data"
     },
     {
       "label": "ANIMATIONS",
@@ -749,9 +829,9 @@
       "source_file": "src/components/sections/LunaBarShowcase.tsx",
       "source_location": "L125",
       "_origin": "ast",
+      "id": "sections_lunabarshowcase_animations",
       "community": 4,
-      "norm_label": "animations",
-      "id": "sections_lunabarshowcase_animations"
+      "norm_label": "animations"
     },
     {
       "label": "BackgroundGlow()",
@@ -759,9 +839,9 @@
       "source_file": "src/components/sections/LunaBarShowcase.tsx",
       "source_location": "L146",
       "_origin": "ast",
+      "id": "sections_lunabarshowcase_backgroundglow",
       "community": 4,
-      "norm_label": "backgroundglow()",
-      "id": "sections_lunabarshowcase_backgroundglow"
+      "norm_label": "backgroundglow()"
     },
     {
       "label": "ProductVisual()",
@@ -769,9 +849,9 @@
       "source_file": "src/components/sections/LunaBarShowcase.tsx",
       "source_location": "L156",
       "_origin": "ast",
+      "id": "sections_lunabarshowcase_productvisual",
       "community": 4,
-      "norm_label": "productvisual()",
-      "id": "sections_lunabarshowcase_productvisual"
+      "norm_label": "productvisual()"
     },
     {
       "label": "ProductDetails()",
@@ -779,9 +859,9 @@
       "source_file": "src/components/sections/LunaBarShowcase.tsx",
       "source_location": "L203",
       "_origin": "ast",
+      "id": "sections_lunabarshowcase_productdetails",
       "community": 4,
-      "norm_label": "productdetails()",
-      "id": "sections_lunabarshowcase_productdetails"
+      "norm_label": "productdetails()"
     },
     {
       "label": "Switcher()",
@@ -789,9 +869,9 @@
       "source_file": "src/components/sections/LunaBarShowcase.tsx",
       "source_location": "L259",
       "_origin": "ast",
+      "id": "sections_lunabarshowcase_switcher",
       "community": 4,
-      "norm_label": "switcher()",
-      "id": "sections_lunabarshowcase_switcher"
+      "norm_label": "switcher()"
     },
     {
       "label": "LunaBarShowcase()",
@@ -799,9 +879,9 @@
       "source_file": "src/components/sections/LunaBarShowcase.tsx",
       "source_location": "L286",
       "_origin": "ast",
+      "id": "sections_lunabarshowcase_lunabarshowcase",
       "community": 4,
-      "norm_label": "lunabarshowcase()",
-      "id": "sections_lunabarshowcase_lunabarshowcase"
+      "norm_label": "lunabarshowcase()"
     },
     {
       "label": "Restaurante.tsx",
@@ -809,9 +889,9 @@
       "source_file": "src/components/sections/Restaurante.tsx",
       "source_location": "L1",
       "_origin": "ast",
+      "id": "sections_restaurante",
       "community": 8,
-      "norm_label": "restaurante.tsx",
-      "id": "sections_restaurante"
+      "norm_label": "restaurante.tsx"
     },
     {
       "label": "MENU_ITEMS",
@@ -819,9 +899,9 @@
       "source_file": "src/components/sections/Restaurante.tsx",
       "source_location": "L5",
       "_origin": "ast",
+      "id": "sections_restaurante_menu_items",
       "community": 8,
-      "norm_label": "menu_items",
-      "id": "sections_restaurante_menu_items"
+      "norm_label": "menu_items"
     },
     {
       "label": "TESTIMONIALS",
@@ -829,9 +909,9 @@
       "source_file": "src/components/sections/Restaurante.tsx",
       "source_location": "L12",
       "_origin": "ast",
+      "id": "sections_restaurante_testimonials",
       "community": 8,
-      "norm_label": "testimonials",
-      "id": "sections_restaurante_testimonials"
+      "norm_label": "testimonials"
     },
     {
       "label": "Restaurante()",
@@ -839,9 +919,9 @@
       "source_file": "src/components/sections/Restaurante.tsx",
       "source_location": "L18",
       "_origin": "ast",
+      "id": "sections_restaurante_restaurante",
       "community": 8,
-      "norm_label": "restaurante()",
-      "id": "sections_restaurante_restaurante"
+      "norm_label": "restaurante()"
     },
     {
       "label": "navigation-menu.tsx",
@@ -849,9 +929,9 @@
       "source_file": "src/components/ui/navigation-menu.tsx",
       "source_location": "L1",
       "_origin": "ast",
+      "id": "ui_navigation_menu",
       "community": 3,
-      "norm_label": "navigation-menu.tsx",
-      "id": "ui_navigation_menu"
+      "norm_label": "navigation-menu.tsx"
     },
     {
       "label": "NavigationMenu()",
@@ -859,9 +939,9 @@
       "source_file": "src/components/ui/navigation-menu.tsx",
       "source_location": "L9",
       "_origin": "ast",
+      "id": "ui_navigation_menu_navigationmenu",
       "community": 3,
-      "norm_label": "navigationmenu()",
-      "id": "ui_navigation_menu_navigationmenu"
+      "norm_label": "navigationmenu()"
     },
     {
       "label": "NavigationMenuList()",
@@ -869,9 +949,9 @@
       "source_file": "src/components/ui/navigation-menu.tsx",
       "source_location": "L30",
       "_origin": "ast",
+      "id": "ui_navigation_menu_navigationmenulist",
       "community": 3,
-      "norm_label": "navigationmenulist()",
-      "id": "ui_navigation_menu_navigationmenulist"
+      "norm_label": "navigationmenulist()"
     },
     {
       "label": "NavigationMenuItem()",
@@ -879,9 +959,9 @@
       "source_file": "src/components/ui/navigation-menu.tsx",
       "source_location": "L40",
       "_origin": "ast",
+      "id": "ui_navigation_menu_navigationmenuitem",
       "community": 3,
-      "norm_label": "navigationmenuitem()",
-      "id": "ui_navigation_menu_navigationmenuitem"
+      "norm_label": "navigationmenuitem()"
     },
     {
       "label": "navigationMenuTriggerStyle",
@@ -889,9 +969,9 @@
       "source_file": "src/components/ui/navigation-menu.tsx",
       "source_location": "L46",
       "_origin": "ast",
+      "id": "ui_navigation_menu_navigationmenutriggerstyle",
       "community": 3,
-      "norm_label": "navigationmenutriggerstyle",
-      "id": "ui_navigation_menu_navigationmenutriggerstyle"
+      "norm_label": "navigationmenutriggerstyle"
     },
     {
       "label": "NavigationMenuTrigger()",
@@ -899,9 +979,9 @@
       "source_file": "src/components/ui/navigation-menu.tsx",
       "source_location": "L50",
       "_origin": "ast",
+      "id": "ui_navigation_menu_navigationmenutrigger",
       "community": 3,
-      "norm_label": "navigationmenutrigger()",
-      "id": "ui_navigation_menu_navigationmenutrigger"
+      "norm_label": "navigationmenutrigger()"
     },
     {
       "label": "NavigationMenuContent()",
@@ -909,9 +989,9 @@
       "source_file": "src/components/ui/navigation-menu.tsx",
       "source_location": "L70",
       "_origin": "ast",
+      "id": "ui_navigation_menu_navigationmenucontent",
       "community": 3,
-      "norm_label": "navigationmenucontent()",
-      "id": "ui_navigation_menu_navigationmenucontent"
+      "norm_label": "navigationmenucontent()"
     },
     {
       "label": "NavigationMenuViewport()",
@@ -919,9 +999,9 @@
       "source_file": "src/components/ui/navigation-menu.tsx",
       "source_location": "L84",
       "_origin": "ast",
+      "id": "ui_navigation_menu_navigationmenuviewport",
       "community": 3,
-      "norm_label": "navigationmenuviewport()",
-      "id": "ui_navigation_menu_navigationmenuviewport"
+      "norm_label": "navigationmenuviewport()"
     },
     {
       "label": "NavigationMenuLink()",
@@ -929,9 +1009,9 @@
       "source_file": "src/components/ui/navigation-menu.tsx",
       "source_location": "L102",
       "_origin": "ast",
+      "id": "ui_navigation_menu_navigationmenulink",
       "community": 3,
-      "norm_label": "navigationmenulink()",
-      "id": "ui_navigation_menu_navigationmenulink"
+      "norm_label": "navigationmenulink()"
     },
     {
       "label": "utils.ts",
@@ -939,9 +1019,9 @@
       "source_file": "src/lib/utils.ts",
       "source_location": "L1",
       "_origin": "ast",
+      "id": "lib_utils",
       "community": 3,
-      "norm_label": "utils.ts",
-      "id": "lib_utils"
+      "norm_label": "utils.ts"
     },
     {
       "label": "cn()",
@@ -949,9 +1029,9 @@
       "source_file": "src/lib/utils.ts",
       "source_location": "L4",
       "_origin": "ast",
+      "id": "lib_utils_cn",
       "community": 3,
-      "norm_label": "cn()",
-      "id": "lib_utils_cn"
+      "norm_label": "cn()"
     },
     {
       "label": "main.jsx",
@@ -959,9 +1039,9 @@
       "source_file": "src/main.jsx",
       "source_location": "L1",
       "_origin": "ast",
+      "id": "src_main",
       "community": 0,
-      "norm_label": "main.jsx",
-      "id": "src_main"
+      "norm_label": "main.jsx"
     },
     {
       "label": "vite.config.js",
@@ -969,12 +1049,52 @@
       "source_file": "vite.config.js",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 11,
-      "norm_label": "vite.config.js",
-      "id": "vite_config"
+      "id": "vite_config",
+      "community": 13,
+      "norm_label": "vite.config.js"
     }
   ],
   "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".opencode/opencode.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "opencode_opencode",
+      "target": "opencode_opencode_plugin"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".opencode/opencode.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "opencode_opencode",
+      "target": "opencode_opencode_schema"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".opencode/package.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "opencode_package",
+      "target": "opencode_package_dependencies"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".opencode/package.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "opencode_package_dependencies",
+      "target": "opencode_package_dependencies_opencode_ai_plugin"
+    },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
@@ -1579,7 +1699,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/sections/Habitaciones.tsx",
-      "source_location": "L90",
+      "source_location": "L157",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "sections_habitaciones",
@@ -1589,11 +1709,31 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/sections/Habitaciones.tsx",
-      "source_location": "L7",
+      "source_location": "L23",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "sections_habitaciones",
+      "target": "sections_habitaciones_room_accents"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/sections/Habitaciones.tsx",
+      "source_location": "L25",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "sections_habitaciones",
       "target": "sections_habitaciones_rooms"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/sections/Habitaciones.tsx",
+      "source_location": "L112",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "sections_habitaciones",
+      "target": "sections_habitaciones_testimonials"
     },
     {
       "relation": "contains",
@@ -2007,5 +2147,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "7e461f39db142ecd3fab3a808d764459cc2adcfa"
+  "built_at_commit": "fb32ed2cf89d8afaac3d8e583ecbac03c617d489"
 }

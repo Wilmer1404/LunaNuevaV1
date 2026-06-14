@@ -57,7 +57,7 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer style={{ marginTop: '120px', backgroundColor: '#0f1f3d', color: '#cbd5e1', fontFamily: 'inherit' }}>
+    <footer style={{ backgroundColor: '#0f1f3d', color: '#cbd5e1', fontFamily: 'inherit' }}>
 
       {/* ── Franja Decorativa Superior ── */}
       <div style={{ height: '4px', background: 'linear-gradient(90deg, #163A70, #4a90d9, #163A70)' }} />
