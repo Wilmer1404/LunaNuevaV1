@@ -20,9 +20,9 @@
     "semantic_hash": "e31a2998265cf2226c0a7a74ccd7c92d"
   },
   "src/App.jsx": {
-    "mtime": 1781414878.9779508,
-    "ast_hash": "00227b35ed7a53d37148c82dd139d199",
-    "semantic_hash": "00227b35ed7a53d37148c82dd139d199"
+    "mtime": 1781416328.5738826,
+    "ast_hash": "8af11ce87c0d24e471702f749fbea492",
+    "semantic_hash": ""
   },
   "src/components/layout/Footer.tsx": {
     "mtime": 1781415625.218496,
