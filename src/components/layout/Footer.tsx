@@ -191,7 +191,7 @@ export default function Footer() {
             © {year} Hotel Luna Nueva — No tenemos derechos.
           </span>
           <span style={{ fontSize: '12px', color: '#334155' }}>
-            Colán, Lima· Perú
+            kurwen es con K 
           </span>
         </div>
       </div>
