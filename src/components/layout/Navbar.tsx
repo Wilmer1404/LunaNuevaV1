@@ -329,7 +329,7 @@ export default function Navbar({ activeTab, setActiveTab }: NavbarProps) {
                 onMouseEnter={e => (e.currentTarget.style.backgroundColor = "#0f2b5b")}
                 onMouseLeave={e => (e.currentTarget.style.backgroundColor = "#163A70")}
               >
-                Reservar Habitación
+           casa de campo
               </button>
             </div>
           </motion.div>
