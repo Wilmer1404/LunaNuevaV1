@@ -188,7 +188,7 @@ export default function Footer() {
       <div className="footer-bottom" style={{ borderTop: '1px solid rgba(255,255,255,0.07)', padding: '24px var(--section-px, 80px)', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '12px' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '12px' }}>
           <span style={{ fontSize: '12px', color: '#475569' }}>
-            © {year} Hotel Luna Nueva — Todos los derechos reservados.
+            © {year} Hotel Luna Nueva — No tenemos derechos.
           </span>
           <span style={{ fontSize: '12px', color: '#334155' }}>
             Colán, Lima· Perú
