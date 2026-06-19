@@ -18,29 +18,29 @@ const FacebookIcon = () => (
 
 const TikTokIcon = () => (
   <svg viewBox="0 0 24 24" fill="currentColor" style={{ width: '20px', height: '20px' }}>
-    <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.76a4.85 4.85 0 01-1.01-.07z"/>
+    <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.76a4.85 4.85 0 01-1.01-.07z" />
   </svg>
 );
 
 const BookingIcon = () => (
   <svg viewBox="0 0 24 24" fill="currentColor" style={{ width: '20px', height: '20px' }}>
-    <path d="M17.35 11.65c.97-.88 1.58-2.14 1.58-3.55A5.1 5.1 0 0013.83 3H4v18h10.47a5.27 5.27 0 005.26-5.26 5.25 5.25 0 00-2.38-4.09zM7.5 6.5h5.83a1.6 1.6 0 110 3.2H7.5V6.5zm6.47 11H7.5v-4.5h6.47a2.25 2.25 0 010 4.5z"/>
+    <path d="M17.35 11.65c.97-.88 1.58-2.14 1.58-3.55A5.1 5.1 0 0013.83 3H4v18h10.47a5.27 5.27 0 005.26-5.26 5.25 5.25 0 00-2.38-4.09zM7.5 6.5h5.83a1.6 1.6 0 110 3.2H7.5V6.5zm6.47 11H7.5v-4.5h6.47a2.25 2.25 0 010 4.5z" />
   </svg>
 );
 
 const TrivagoIcon = () => (
   <svg viewBox="0 0 24 24" fill="currentColor" style={{ width: '20px', height: '20px' }}>
-    <path d="M15.5 2C10.81 2 7 5.81 7 10.5c0 1.74.51 3.35 1.38 4.7L2 21.5l1.5 1.5 6.3-6.38A8.46 8.46 0 0015.5 19C20.19 19 24 15.19 24 10.5S20.19 2 15.5 2zm0 15a6.5 6.5 0 110-13 6.5 6.5 0 010 13z"/>
+    <path d="M15.5 2C10.81 2 7 5.81 7 10.5c0 1.74.51 3.35 1.38 4.7L2 21.5l1.5 1.5 6.3-6.38A8.46 8.46 0 0015.5 19C20.19 19 24 15.19 24 10.5S20.19 2 15.5 2zm0 15a6.5 6.5 0 110-13 6.5 6.5 0 010 13z" />
   </svg>
 );
 
 const SOCIAL_LINKS = [
-  { name: 'Instagram',  href: 'https://www.instagram.com/lunanuevadecolan',                  Icon: InstagramIcon,   color: '#E1306C' },
-  { name: 'Facebook',   href: 'https://www.facebook.com/lunanuevadecolan',                   Icon: FacebookIcon,    color: '#1877F2' },
-  { name: 'TikTok',     href: 'https://www.tiktok.com/@lunanuevadecolanpiura',                     Icon: TikTokIcon,  color: '#010101' },
-  { name: 'Booking',    href: 'https://www.booking.com/hotel/pe/luna-nueva.es.html?aid=318615&label=Spanish_Peru_ES_PE_28510488865-4PDLMkENnoMrJCDFRvfdiAS217246329975%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi55649980777%3Atidsa-322982441908%3Alp1011139%3Ali%3Adec%3Adm&sid=ba4e82c87919617c6f51409d987c4745&dest_id=-343597&dest_type=city&dist=0&group_adults=2&group_children=0&hapos=1&hpos=1&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&srepoch=1755446937&srpvid=ce3f71892d490a00&type=total&ucfs=1&chal_t=1778291374067&force_referer=https%3A%2F%2Flunanuevadecolan.com%2F',                    Icon: BookingIcon, color: '#003580' },
-  { name: 'tripadvisor',    href: 'https://www.tripadvisor.com.pe/Restaurant_Review-g1235468-d7122001-Reviews-Luna_Nueva_de_Colan-Colan_Piura_Region.html',                    Icon: TrivagoIcon, color: '#e7372a' },
-  { name: 'WhatsApp',   href: 'https://wa.me/51999999999',              Icon: MessageCircle, color: '#25D366' },
+  { name: 'Instagram', href: 'https://www.instagram.com/lunanuevadecolan', Icon: InstagramIcon, color: '#E1306C' },
+  { name: 'Facebook', href: 'https://www.facebook.com/lunanuevadecolan', Icon: FacebookIcon, color: '#1877F2' },
+  { name: 'TikTok', href: 'https://www.tiktok.com/@lunanuevadecolanpiura', Icon: TikTokIcon, color: '#010101' },
+  { name: 'Booking', href: 'https://www.booking.com/hotel/pe/luna-nueva.es.html?aid=318615&label=Spanish_Peru_ES_PE_28510488865-4PDLMkENnoMrJCDFRvfdiAS217246329975%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi55649980777%3Atidsa-322982441908%3Alp1011139%3Ali%3Adec%3Adm&sid=ba4e82c87919617c6f51409d987c4745&dest_id=-343597&dest_type=city&dist=0&group_adults=2&group_children=0&hapos=1&hpos=1&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&srepoch=1755446937&srpvid=ce3f71892d490a00&type=total&ucfs=1&chal_t=1778291374067&force_referer=https%3A%2F%2Flunanuevadecolan.com%2F', Icon: BookingIcon, color: '#003580' },
+  { name: 'tripadvisor', href: 'https://www.tripadvisor.com.pe/Restaurant_Review-g1235468-d7122001-Reviews-Luna_Nueva_de_Colan-Colan_Piura_Region.html', Icon: TrivagoIcon, color: '#e7372a' },
+  { name: 'WhatsApp', href: 'https://wa.me/51999999999', Icon: MessageCircle, color: '#25D366' },
 ];
 
 const NAV_COL = [
@@ -48,9 +48,9 @@ const NAV_COL = [
 ];
 
 const HORARIO = [
-  { dia: 'Lunes – Viernes',  hora: '10:00 AM – 11:00 PM' },
-  { dia: 'Sábados',          hora: '10:00 AM – 12:00 AM' },
-  { dia: 'Domingos',         hora: '11:00 AM – 10:00 PM' },
+  { dia: 'Lunes – Viernes', hora: '10:00 AM – 11:00 PM' },
+  { dia: 'Sábados', hora: '10:00 AM – 12:00 AM' },
+  { dia: 'Domingos', hora: '11:00 AM – 10:00 PM' },
 ];
 
 export default function Footer() {
@@ -191,7 +191,7 @@ export default function Footer() {
             © {year} Hotel Luna Nueva — Todos los derechos reservados.
           </span>
           <span style={{ fontSize: '12px', color: '#334155' }}>
-            Colán, Piura · Perú
+            Colán, Lima· Perú
           </span>
         </div>
       </div>
