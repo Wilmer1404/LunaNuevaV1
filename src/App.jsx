@@ -69,12 +69,11 @@ function App() {
         {['servicios', 'promociones', 'contactanos'].includes(currentTab) && (
           <div style={{ minHeight: '80vh', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '120px 20px' }}>
             <h2 style={{ fontSize: 'clamp(1.5rem, 4vw, 2rem)', color: '#163A70', fontWeight: 300, textAlign: 'center' }}>
-              Página de <span style={{ fontWeight: 600, textTransform: 'capitalize' }}>{currentTab.replace('-', ' ')}</span> en construcción
+              Página de jhonatan <span style={{ fontWeight: 600, textTransform: 'capitalize' }}>{currentTab.replace('-', ' ')}</span> en construcción
             </h2>
           </div>
         )}
       </motion.div>
-
       <Footer />
     </main>
   );
